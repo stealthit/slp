@@ -166,12 +166,14 @@ select option, select.select-box option {
 }
 
 .radio-group input[type="radio"]:checked + label {
+  white-space: nowrap;
   background: url(../assets/bt_radio_s.svg) no-repeat;
   background-size: 16px;
   background-position-y: center;
 }
 
 .radio-group label {
+  white-space: nowrap;
   height: 26px;
   padding-left: 20px;
   display: -webkit-box;

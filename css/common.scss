@@ -149,6 +149,7 @@ select, select.select-box {
       clip:rect(0 0 0 0);
 
       &:checked + label{ 
+        white-space: nowrap;
         background:url(../assets/bt_radio_s.svg) no-repeat;  
         background-size: 16px;
         background-position-y: center;
@@ -159,6 +160,7 @@ select, select.select-box {
   }
  
   label{    
+    white-space: nowrap;
      height: 26px;      
      padding-left:20px; 
      display:flex; 
