@@ -1,0 +1,59 @@
+$main_color : #172d5a;
+
+$min-width : 1500px;
+
+
+@mixin flex_center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin small {
+  @media (min-width: 1500px) {
+    @content;
+  }
+}
+
+@mixin animation($delay, $duration, $name) {
+  animation-delay: $delay;
+  animation-duration: $duration;
+  animation-name: $name;
+}
+
+@mixin keyframe($animation_name) {
+  @keyframes #{$animation_name} {
+    @content;
+  }
+}
+
+@mixin menu_images($name) {  
+  .#{$name}{
+    content: url(../assets/#{$name}_n@3x.png);
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+    &.active {
+      content: url(../assets/#{$name}_s@3x.png);
+    }
+  }  
+}
+
+@mixin scrollbar($direction) {
+  overflow-x: overlay;
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    @if $direction == 'H' { height: 6px; } @else { width: 6px; }
+    display: inline;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @if $direction == 'H' { height: 6px; } @else { width: 6px; }
+    border-radius: 6px;
+    background: #b6bdc1;
+  }
+}
