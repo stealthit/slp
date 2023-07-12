@@ -153,6 +153,7 @@
   background-size: 10px 10px;
   left: 163px;
   background-image: url(../assets/ic_left_open@3x.png);
+  z-index: 3;
 }
 
 .wrapper .main-wrapper .btn-sidebar.show {
