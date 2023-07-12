@@ -291,7 +291,7 @@ select option, select.select-box option {
   gap: 10px;
 }
 
-.setting-grid .setting-grid-content .input-wrapper input[type="text"] {
+.setting-grid .setting-grid-content .input-wrapper input[type="text"], .setting-grid .setting-grid-content .input-wrapper input[type="date"] {
   width: 100%;
 }
 
@@ -359,6 +359,13 @@ select option, select.select-box option {
   height: 13px;
   margin: 4px 6px 5px 0;
   background-color: #172d5a;
+}
+
+.list-title {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 2;
+  color: #152c5b;
 }
 
 .ic_left_1_1 {

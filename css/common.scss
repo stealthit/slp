@@ -243,7 +243,7 @@ select, select.select-box {
       }
     }
     .input-wrapper{
-      input[type="text"] {width: 100%;}
+      input[type="text"],input[type="date"] {width: 100%;}
       display: flex;
       gap: 10px;
 
@@ -289,6 +289,12 @@ select, select.select-box {
 
     background-color: #172d5a;
   }
+}
+.list-title {
+  font-size: 14px;
+  font-weight: bold;                
+  line-height: 2;                
+  color: #152c5b;
 }
 @include menu_images(ic_left_1_1);
 @include menu_images(ic_left_1_2);
