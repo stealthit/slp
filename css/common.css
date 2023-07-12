@@ -31,6 +31,7 @@ input[type=text]:disabled, input[type=date]:disabled, input[type=month]:disabled
   border-radius: 2px;
   border: solid 1px #e2e5e9;
   background-color: #f8f7f7;
+  color: #c2c5c8;
 }
 
 input[type=date], input[type=month], input[type=time] {
@@ -152,26 +153,6 @@ select option, select.select-box option {
   align-items: center;
 }
 
-.radio-group input[type="radio"] {
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  border: 0 none;
-  margin: 0;
-  position: absolute;
-  left: 0;
-  top: 0;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-}
-
-.radio-group input[type="radio"]:checked + label {
-  white-space: nowrap;
-  background: url(../assets/bt_radio_s.svg) no-repeat;
-  background-size: 16px;
-  background-position-y: center;
-}
-
 .radio-group label {
   white-space: nowrap;
   height: 26px;
@@ -196,8 +177,34 @@ select option, select.select-box option {
   margin-left: 20px;
 }
 
+.radio-group input[type="radio"] {
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0 none;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.radio-group input[type="radio"]:checked + label {
+  white-space: nowrap;
+  background: url(../assets/bt_radio_s.svg) no-repeat;
+  background-size: 16px;
+  background-position-y: center;
+}
+
+.radio-group input[type="radio"]:disabled + label {
+  background: url(../assets/bt_radio_d.svg) no-repeat;
+  background-size: 16px;
+  background-position-y: center;
+}
+
 .input-group {
-  width: 140px;
+  width: 260px;
   height: 26px;
   border-radius: 2px;
   border: solid 1px #c2c5c8;
@@ -218,6 +225,13 @@ select option, select.select-box option {
   color: #152c5b;
 }
 
+.input-check-group .check-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+}
+
 .con-box {
   padding: 10px;
   border-radius: 4px;
@@ -229,8 +243,10 @@ select option, select.select-box option {
 .setting-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 112px 1fr 112px 1fr 112px 1fr;
-      grid-template-columns: 112px 1fr 112px 1fr 112px 1fr;
+  -ms-grid-columns: 110px 1fr 110px 1fr 110px 1fr;
+      grid-template-columns: 110px 1fr 110px 1fr 110px 1fr;
+  -ms-grid-rows: 26px;
+      grid-template-rows: 26px;
   grid-auto-flow: row;
   gap: 10px;
 }
@@ -248,6 +264,24 @@ select option, select.select-box option {
   height: 26px;
   white-space: nowrap;
   text-align: right;
+  font-size: 12px;
+  font-weight: bold;
+  color: #5c7099;
+}
+
+.setting-grid .setting-grid-content {
+  font-size: 12px;
+  font-weight: 500;
+  color: #152c5b;
+  width: 260px;
+}
+
+.setting-grid .setting-grid-content .text-edit {
+  background: #fff7e4;
+}
+
+.setting-grid .setting-grid-content .text-edit select {
+  background-color: #fff7e4;
 }
 
 .setting-grid .setting-grid-content .input-wrapper {
@@ -255,6 +289,19 @@ select option, select.select-box option {
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
+}
+
+.setting-grid .setting-grid-content .input-wrapper input[type="text"] {
+  width: 100%;
+}
+
+.setting-grid .setting-grid-content .input-wrapper.text-edit input {
+  background: #fff7e4;
+}
+
+.setting-grid .span-3 {
+  grid-column: span 3;
+  width: calc(100% - ((100% - 650px) / 2));
 }
 
 .btn-navy {
@@ -294,6 +341,24 @@ select option, select.select-box option {
   color: #e80000;
   font-size: 14px;
   font-weight: 500;
+}
+
+.ic-title-mark {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ic-title-mark::before {
+  display: block;
+  content: "";
+  width: 3px;
+  height: 13px;
+  margin: 4px 6px 5px 0;
+  background-color: #172d5a;
 }
 
 .ic_left_1_1 {
@@ -368,5 +433,13 @@ select option, select.select-box option {
   content: url(../assets/ic_navi_arrow@3x.png);
   width: 6px;
   height: 9px;
+}
+
+.ic-arrow-down {
+  content: url(../assets/ic_left_open@3x.png);
+  width: 10px;
+  height: 10px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 /*# sourceMappingURL=common.css.map */

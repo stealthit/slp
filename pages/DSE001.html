@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <script></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <div class="header-logo">
+        <img src="../assets/img_logo@3x.png" alt="" width="19" height="19">
+        스마트물류플랫폼
+      </div>      
+      <div class="header-center">
+        <ul class="main-menu">
+          <li class="active">물류납품</li>
+          <li>물류창고</li>
+          <li>물류운송</li>
+          <li>물류관제</li>
+          <li>물류공유</li>
+          <li>운영관리</li>
+          <li>시스템관리</li>
+        </ul>
+        <div class="header-info">            
+            <div class="user-info">회사명 · 홍길동님</div>
+            <button class="btn-logout">로그아웃</button>
+        </div>
+      </div>
+      <div class="header-favorite">
+        <img src="../assets/ic_bookmark_on@3x.png" alt="" width="16" height="16">
+        즐겨찾기
+      </div>      
+    </div>
+    <div class="main-wrapper">
+      <!-- sidebar menu -->
+      <button class="btn-sidebar show"><img></button>
+      <div class="sidebar-container show">
+        <div class="sidebar-menu-wrapper">
+          <details open class="active">
+            <summary>
+              <div class="submenu-title"><img class="ic_left_1_1 active"> 발주 </div>
+              <img class="ic-submenu-open">
+            </summary>
+            <ul class="details-submenu">
+              <li>입고오더등록</li>
+              <li class="active">납입카드 출력</li>
+              <li>ASN 등록</li>
+              <li>ASN 정보 전송</li>
+              <li>입고현황조회</li>
+              <li>취소 ASN 선택</li>
+              <li>ASN 취소 등록</li>
+              <li>취소 정보 전송</li>
+            </ul>
+          </details>  
+          <details>
+            <summary>
+              <div class="submenu-title"><img class="ic_left_1_2"> 수주 </div>              
+              <img class="ic-submenu-open">
+            </summary>
+            <ul class="details-submenu">
+              <li>납품오더수신(I/F)</li>
+              <li>납품오더등록</li>
+              <li>납품취소 선택</li>
+              <li>납품오더취소 등록</li>
+              <li>납품취소 정보 전송</li>
+              <li>출고오더정보 생성</li>
+              <li>출고오더정보 전송</li>
+              <li>운송오더정보 생성</li>
+              <li>운송오더정보 전송</li>
+              <li>납품현황조회</li>
+            </ul>
+          </details>  
+          <details>
+            <summary>
+              <div class="submenu-title"><img class="ic_left_1_4"> 재고 </div>              
+              <img class="ic-submenu-open">
+            </summary>
+            <ul class="details-submenu">
+              <li>재고현황조회</li>
+              <li>재고조정지시</li>
+              <li>재고조정지시 전송</li>
+              <li>재고조정현황 조회</li>
+              <li>재고조정취소 선택</li>
+              <li>재고조정취소 등록</li>
+              <li>취소지시전송</li>
+            </ul>
+          </details>  
+          <details>
+            <summary>
+              <div class="submenu-title"><img class="ic_left_1_3"> 반품 </div>              
+              <img class="ic-submenu-open">
+            </summary>
+            <ul class="details-submenu">
+              <li>반출오더등록</li>
+              <li>반출오더전송</li>
+              <li>반출증출력리포트</li>
+              <li>반출현황조회</li>
+              <li>반출취소 선택</li>
+              <li>반출취소 등록</li>
+              <li>반출취소 전송</li>
+              <li>회수오더등록</li>
+              <li>회수오더전송</li>
+              <li>회수현황조회</li>
+            </ul>
+          </details>         
+        </div>
+        <div class="siderbar-help">도움말</div>
+      </div>
+      <!-- //sidebar menu -->
+      <main id="content" class="main-content">
+        <div class="content-wrapper">
+          <div class="tab-container">            
+            <ul class="tab">
+              <li class="tab-menu on"><img class="ic-bookmark on"> 납입카드 출력 <img class="ic-tab-close"> </li>
+              <li class="tab-menu"><img class="ic-bookmark"> ASN 정보 전송<img class="ic-tab-close"></li>
+              <li class="tab-menu"><img class="ic-bookmark">납품오더취소 등록<img class="ic-tab-close"></li>
+              <li class="tab-menu"><img class="ic-bookmark">재고조정현황 조회<img class="ic-tab-close"></li>
+              <li class="tab-menu"><img class="ic-bookmark">반출취소 선택<img class="ic-tab-close"></li>
+              <li class="tab-menu"><img class="ic-bookmark">입수량<img class="ic-tab-close"></li>
+              <li class="tab-menu"><img class="ic-bookmark">반품등록<img class="ic-tab-close"></li>
+              <li class="tab-menu"><img class="ic-bookmark">피킹처리<img class="ic-tab-close"></li>
+              <li class="tab-menu"><img class="ic-bookmark">반출출고지시등록<img class="ic-tab-close"></li>
+              <li class="tab-menu"><img class="ic-bookmark">재고실사지시등록<img class="ic-tab-close"></li>
+              <li class="tab-menu"><img class="ic-bookmark">운송오더상세<img class="ic-tab-close"></li>
+              <li class="tab-menu"><img class="ic-bookmark">상차/하차처리<img class="ic-tab-close"></li>
+              <li class="tab-menu"><img class="ic-bookmark">팔렛타이징처리-PDA<img class="ic-tab-close"></li>
+              <li class="tab-menu"><img class="ic-bookmark">긴급오더추가<img class="ic-tab-close"></li>              
+            </ul>
+            <div class="tab-arrow-wrapper">
+              <div class="btn-tab-arrow left"><img src="" alt=""></div>
+              <div class="btn-tab-arrow right on"><img src="" alt=""></div>
+            </div>
+          </div>
+          <div class="tab-contents DSE001">
+            <div class="location">    
+              <div class="nav-home"><img class="ic-navi-home">Home</div>
+              <img class="ic-navi-arrow">물류납품
+              <img class="ic-navi-arrow">발주
+              <img class="ic-navi-arrow">납입카드 출력
+            </div>
+            <div class="search-conditions con-box">              
+              <div class="setting-grid">
+                <div class="setting-grid-title">창고명</div>
+                <div class="setting-grid-content">  
+                  <div class="input-wrapper">                    
+                    <input type="text" value="울산유통" /> 
+                  </div>                
+                </div>
+                <div class="setting-grid-title">사업자등록번호</div>
+                <div class="setting-grid-content">  
+                  <div class="input-wrapper">                    
+                    <input type="text" value="123456789" /> 
+                  </div>                     
+                </div>
+                <div class="setting-grid-title">대표자명</div>
+                <div class="setting-grid-content">   
+                  <div class="input-wrapper">                    
+                    <input type="text" value="홍길동" /> 
+                  </div>  
+                </div>
+                <div class="setting-grid-title">사용여부</div>
+                <div class="setting-grid-content">     
+                  <div class="input-group">
+                    <select>
+                      <option value="" selected>전체</option>
+                      <option value="">옵션1</option>
+                      <option value="">옵션2</option>
+                      <option value="">옵션3</option>
+                    </select>                  
+                  </div>                  
+                </div>
+                <div class="setting-grid-title">공유여부</div>
+                <div class="setting-grid-content">      
+                  <div class="input-group">
+                    <select>
+                      <option value="" selected>전체</option>
+                      <option value="">옵션1</option>
+                      <option value="">옵션2</option>
+                      <option value="">옵션3</option>
+                    </select>                  
+                  </div>           
+                </div>                
+              </div>
+              <div class="search-btn-group">
+                <div class="btn-search btn-navy"><img>조회</div>
+                <div class="btn-clear btn-white"><img>초기화</div>
+              </div>
+            </div>
+            <div class="list-wrapper">
+              <div class="search-list con-box">
+                <div class="list-top">
+                  <div class="list-title ic-title-mark">창고 기본정보</div>                  
+                </div>
+                <!-- 개발 작업시 그리드 들어갈 부분 -->
+                <div class="list-grid-wrapper">
+                  그리드 영역
+                </div>
+                <!---------------------------------->
+              </div>
+              <div class="search-edit con-box">                
+                <div class="setting-grid">
+                  <div class="setting-grid-title ic-title-nece">창고ID</div>
+                  <div class="setting-grid-content">  
+                    <div class="input-wrapper">                    
+                      <input type="text" value="2003000001" disabled/> 
+                    </div>                
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">공급자명</div>
+                  <div class="setting-grid-content">  
+                    <div class="input-wrapper">                    
+                      <input type="text" value="홍길동" disabled/> 
+                    </div>                
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">창고명</div>
+                  <div class="setting-grid-content">  
+                    <div class="input-wrapper text-edit">                    
+                      <input type="text" value="울산유통"/> 
+                    </div>                
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">사업자등록번호</div>
+                  <div class="setting-grid-content">  
+                    <div class="input-wrapper text-edit">                    
+                      <input type="text" value="123456789"/> 
+                    </div>                
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">대표자명</div>
+                  <div class="setting-grid-content">  
+                    <div class="input-wrapper text-edit">                    
+                      <input type="text" value="홍길동"/> 
+                    </div>                
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">담당자명</div>
+                  <div class="setting-grid-content">  
+                    <div class="input-wrapper text-edit">                    
+                      <input type="text" value="홍길동"/> 
+                    </div>                
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">전화번호</div>
+                  <div class="setting-grid-content">  
+                    <div class="input-wrapper text-edit">                    
+                      <input type="text" value="01012345678"/> 
+                    </div>                
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">이메일</div>
+                  <div class="setting-grid-content">  
+                    <div class="input-wrapper text-edit">                    
+                      <input type="text" value="hk1@gmail.com"/> 
+                    </div>                
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">지역(시도)</div>
+                  <div class="setting-grid-content">     
+                    <div class="input-group text-edit">
+                      <select>
+                        <option value="" selected></option>
+                        <option value="">옵션1</option>
+                        <option value="">옵션2</option>
+                        <option value="">옵션3</option>
+                      </select>                  
+                    </div>                  
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">지역(시군구)</div>
+                  <div class="setting-grid-content">     
+                    <div class="input-group text-edit">
+                      <select>
+                        <option value="" selected></option>
+                        <option value="">옵션1</option>
+                        <option value="">옵션2</option>
+                        <option value="">옵션3</option>
+                      </select>                  
+                    </div>                  
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">상세주소</div>
+                  <div class="setting-grid-content span-3">  
+                    <div class="input-wrapper text-edit">                    
+                      <input type="text" value=""/> 
+                    </div>                
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">전체층수</div>
+                  <div class="setting-grid-content">  
+                    <div class="input-wrapper">                    
+                      <input type="text" value="4"/> 
+                    </div>                
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">지하층수</div>
+                  <div class="setting-grid-content">  
+                    <div class="input-wrapper">                    
+                      <input type="text" value="2"/> 
+                    </div>                
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">경도</div>
+                  <div class="setting-grid-content">  
+                    <div class="input-wrapper">                    
+                      <input type="text" value="4"/> 
+                    </div>                
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">위도</div>
+                  <div class="setting-grid-content">  
+                    <div class="input-wrapper">                    
+                      <input type="text" value="2"/> 
+                    </div>                
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">대지면적</div>
+                  <div class="setting-grid-content">  
+                    <div class="input-wrapper text-edit">                    
+                      <input type="text" value="450"/> 
+                    </div>                
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">연면적</div>
+                  <div class="setting-grid-content">  
+                    <div class="input-wrapper text-edit">                    
+                      <input type="text" value="500"/> 
+                    </div>                
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">창고종류</div>
+                  <div class="setting-grid-content">     
+                    <div class="input-group text-edit">
+                      <select>
+                        <option value="" selected>상온</option>
+                        <option value="">옵션1</option>
+                        <option value="">옵션2</option>
+                        <option value="">옵션3</option>
+                      </select>                  
+                    </div>                  
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">차량진입정보</div>
+                  <div class="setting-grid-content">     
+                    <div class="input-group text-edit">
+                      <select>
+                        <option value="" selected>25톤이하</option>
+                        <option value="">옵션1</option>
+                        <option value="">옵션2</option>
+                        <option value="">옵션3</option>
+                      </select>                  
+                    </div>                  
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">사용여부</div>
+                  <div class="setting-grid-content">     
+                    <div class="input-group text-edit">
+                      <select>
+                        <option value="" selected>Y</option>
+                        <option value="">옵션1</option>
+                        <option value="">옵션2</option>
+                        <option value="">옵션3</option>
+                      </select>                  
+                    </div>                  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>          
+        </div>
+        <div class="footer">Copyright © 스마트물류플랫폼 All right reserved.</div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../scripts/jquery-3.6.0.min.js"></script>
+  <script src="../scripts/jquery-ui.min.js"></script>
+  <script src="../scripts/script.js"></script>
+</body>
+</html>
