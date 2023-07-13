@@ -18,6 +18,10 @@ body {
   overflow-wrap: break-word;
 }
 
+textarea {
+  padding: 4px 8px;
+}
+
 input[type=text], input[type=date], input[type=month] {
   width: 120px;
   height: 26px;
@@ -71,6 +75,7 @@ input[type=date]:after, input[type=month]:after {
 }
 
 input[type="checkbox"] {
+  white-space: nowrap;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -216,6 +221,8 @@ select option, select.select-box option {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -226,6 +233,7 @@ select option, select.select-box option {
 }
 
 .input-check-group .check-box {
+  white-space: nowrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -285,6 +293,7 @@ select option, select.select-box option {
 }
 
 .setting-grid .setting-grid-content .input-wrapper {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -302,6 +311,154 @@ select option, select.select-box option {
 .setting-grid .span-3 {
   grid-column: span 3;
   width: calc(100% - ((100% - 650px) / 2));
+}
+
+.setting-grid.grid-check-line {
+  -ms-grid-columns: 110px 1fr;
+      grid-template-columns: 110px 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+}
+
+.setting-grid.grid-check-line .setting-grid-content {
+  width: auto;
+}
+
+.setting-grid.grid-check-line .setting-grid-content .input-check-group {
+  gap: 0;
+}
+
+.setting-grid.grid-check-line .setting-grid-content .input-check-group .check-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 26px;
+  width: 125px;
+}
+
+.setting-etc {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 100px;
+}
+
+.setting-etc .setting-etc-property {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.setting-etc .setting-etc-property .etc-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 26px;
+  width: 110px;
+  white-space: nowrap;
+  text-align: right;
+  font-size: 12px;
+  font-weight: bold;
+  color: #5c7099;
+}
+
+.setting-etc .setting-etc-property .add-pic-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.setting-etc .setting-etc-property .add-pic-wrap .btn-l-pic-add {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+  width: 80px;
+  height: 80px;
+  border-radius: 2px;
+  border: dashed 1px #c2c5c8;
+  background-color: #fff;
+  font-size: 11px;
+  font-weight: 500;
+  color: #5c7099;
+}
+
+.setting-etc .setting-etc-property .add-pic-wrap .btn-l-pic-add img {
+  content: url(../assets/ic_add@3x.png);
+  width: 12px;
+  height: 12px;
+}
+
+.setting-etc .setting-etc-property .add-pic-wrap .pic-detail {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+}
+
+.setting-etc .setting-etc-property .add-pic-wrap .pic-detail img {
+  width: 80px;
+  height: 80px;
+}
+
+.setting-etc .setting-etc-property .add-pic-wrap .pic-detail .btn-pic-delete {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: url(../assets/bt_img_del@3x.png) no-repeat;
+  background-size: 16px;
+  z-index: 3;
+}
+
+.setting-etc .setting-etc-property .add-pic-wrap .pic-detail .pic-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: #172d5a;
+}
+
+.setting-etc .setting-etc-property .etc-text-box {
+  width: 259px;
+  height: 82px;
+  border-radius: 2px;
+  border: solid 1px #c2c5c8;
+  background-color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  color: #152c5b;
 }
 
 .btn-navy {

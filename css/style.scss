@@ -425,11 +425,12 @@
     .search-list {   
       width: calc((100% - 130px) / 3);      
     }
-    .search-edit {
-      padding-right: 100px;
+    .search-edit {      
+      &:not(:has(.grid-check-line)) {padding-right: 100px;}
       flex: 1;
       .setting-grid {
         grid-template-columns: 110px 1fr 110px 1fr;
+        &.grid-check-line {grid-template-columns: 110px 1fr;}
       }
     }
   }

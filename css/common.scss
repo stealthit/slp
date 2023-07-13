@@ -14,6 +14,7 @@ body {
   cursor: default;
   overflow-wrap: break-word;
 }
+textarea {padding: 4px 8px;}
 input[type=text],input[type=date],input[type=month] {
   width: 120px;
   height: 26px;
@@ -65,6 +66,7 @@ input[type=date]:after,input[type=month]:after {
 }
 
 input[type="checkbox"] {
+  white-space: nowrap;
   appearance: none;
   position: relative;
   width: 16px;
@@ -191,9 +193,10 @@ select, select.select-box {
   border: solid 1px #c2c5c8;
   background-color: #fff;
 }
-.input-check-group {
+.input-check-group {  
   height: 100%;
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   align-items: center;
   font-size: 13px;
@@ -201,6 +204,7 @@ select, select.select-box {
   color: #152c5b;
 
   .check-box {
+    white-space: nowrap;
     display: flex;
     gap: 4px;
   }
@@ -243,6 +247,7 @@ select, select.select-box {
       }
     }
     .input-wrapper{
+      position: relative;
       input[type="text"],input[type="date"] {width: 100%;}
       display: flex;
       gap: 10px;
@@ -253,6 +258,104 @@ select, select.select-box {
     }
   }
   .span-3 {grid-column: span 3; width: calc(100% - ((100% - 650px) / 2));}
+  &.grid-check-line {
+    grid-template-columns: 110px 1fr;
+    grid-template-rows: auto;
+    .setting-grid-content {
+      width: auto;
+      .input-check-group {
+        gap: 0;
+        
+        .check-box {
+          display: flex;
+          align-items: center;
+          height: 26px;width: 125px;
+        }
+      }
+    }
+  }
+}
+.setting-etc {
+  margin-top: 10px;
+  display: flex;
+  padding-right: 100px;
+  .setting-etc-property {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    .etc-title {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      height: 26px;  
+      width: 110px;
+      white-space: nowrap;
+      text-align: right;
+
+      font-size: 12px;
+      font-weight: bold;    
+      color: #5c7099;
+    }
+    .add-pic-wrap {
+      display: flex;
+      gap: 10px;
+      .btn-l-pic-add {
+        cursor: pointer;
+        @include flex_center;
+        flex-direction: column;
+        gap: 4px;
+        width: 80px;
+        height: 80px;        
+        border-radius: 2px;
+        border: dashed 1px #c2c5c8;
+        background-color: #fff;
+        font-size: 11px;
+        font-weight: 500;                
+        color: #5c7099;
+        img {
+          content: url(../assets/ic_add@3x.png);
+          width: 12px;
+          height: 12px;
+        }
+      }      
+      .pic-detail {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        img{
+          width: 80px;
+          height: 80px;
+        }
+        .btn-pic-delete {
+          cursor: pointer;
+          width: 16px;
+          height: 16px;
+          position: absolute;
+          top: 4px;
+          right: 4px;
+          background: url(../assets/bt_img_del@3x.png) no-repeat;
+          background-size : 16px;
+          z-index: 3;
+        }
+        .pic-name {
+          font-size: 12px;
+          font-weight: 500;          
+          color: #172d5a;
+        }
+      }
+    }
+    .etc-text-box {
+      width: 259px;
+      height: 82px;      
+      border-radius: 2px;
+      border: solid 1px #c2c5c8;
+      background-color: #fff;
+      font-size: 12px;
+      font-weight: 500;  
+      color: #152c5b;
+    }
+  }
 }
 .btn-navy {
   @include flex_center;

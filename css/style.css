@@ -679,15 +679,23 @@
 }
 
 .DSE001 .list-wrapper .search-edit, .DSE002 .list-wrapper .search-edit, .DSE004 .list-wrapper .search-edit {
-  padding-right: 100px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
+.DSE001 .list-wrapper .search-edit:not(:has(.grid-check-line)), .DSE002 .list-wrapper .search-edit:not(:has(.grid-check-line)), .DSE004 .list-wrapper .search-edit:not(:has(.grid-check-line)) {
+  padding-right: 100px;
+}
+
 .DSE001 .list-wrapper .search-edit .setting-grid, .DSE002 .list-wrapper .search-edit .setting-grid, .DSE004 .list-wrapper .search-edit .setting-grid {
   -ms-grid-columns: 110px 1fr 110px 1fr;
       grid-template-columns: 110px 1fr 110px 1fr;
+}
+
+.DSE001 .list-wrapper .search-edit .setting-grid.grid-check-line, .DSE002 .list-wrapper .search-edit .setting-grid.grid-check-line, .DSE004 .list-wrapper .search-edit .setting-grid.grid-check-line {
+  -ms-grid-columns: 110px 1fr;
+      grid-template-columns: 110px 1fr;
 }
 
 .DSE009 .list-wrapper {
