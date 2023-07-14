@@ -240,6 +240,30 @@ select option, select.select-box option {
   gap: 4px;
 }
 
+.input-time-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 4px;
+  height: 100%;
+  font-size: 13px;
+  font-weight: 500;
+  color: #152c5b;
+}
+
+.input-time-group input[type="time"] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+}
+
 .con-box {
   padding: 10px;
   border-radius: 4px;
@@ -344,6 +368,9 @@ select option, select.select-box option {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.setting-etc:not(:has(.no-padding)) {
   padding-right: 100px;
 }
 
@@ -376,14 +403,26 @@ select option, select.select-box option {
   color: #5c7099;
 }
 
-.setting-etc .setting-etc-property .add-pic-wrap {
+.setting-etc .setting-etc-property .etc-text-box {
+  width: 259px;
+  height: 82px;
+  border-radius: 2px;
+  border: solid 1px #c2c5c8;
+  background-color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  color: #152c5b;
+}
+
+.add-pic-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 10px;
 }
 
-.setting-etc .setting-etc-property .add-pic-wrap .btn-l-pic-add {
+.add-pic-wrap .btn-l-pic-add {
+  text-align: center;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -409,13 +448,13 @@ select option, select.select-box option {
   color: #5c7099;
 }
 
-.setting-etc .setting-etc-property .add-pic-wrap .btn-l-pic-add img {
+.add-pic-wrap .btn-l-pic-add img {
   content: url(../assets/ic_add@3x.png);
   width: 12px;
   height: 12px;
 }
 
-.setting-etc .setting-etc-property .add-pic-wrap .pic-detail {
+.add-pic-wrap .pic-detail {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -427,12 +466,12 @@ select option, select.select-box option {
   gap: 4px;
 }
 
-.setting-etc .setting-etc-property .add-pic-wrap .pic-detail img {
+.add-pic-wrap .pic-detail img {
   width: 80px;
   height: 80px;
 }
 
-.setting-etc .setting-etc-property .add-pic-wrap .pic-detail .btn-pic-delete {
+.add-pic-wrap .pic-detail .btn-pic-delete {
   cursor: pointer;
   width: 16px;
   height: 16px;
@@ -444,21 +483,10 @@ select option, select.select-box option {
   z-index: 3;
 }
 
-.setting-etc .setting-etc-property .add-pic-wrap .pic-detail .pic-name {
+.add-pic-wrap .pic-detail .pic-name {
   font-size: 12px;
   font-weight: 500;
   color: #172d5a;
-}
-
-.setting-etc .setting-etc-property .etc-text-box {
-  width: 259px;
-  height: 82px;
-  border-radius: 2px;
-  border: solid 1px #c2c5c8;
-  background-color: #fff;
-  font-size: 12px;
-  font-weight: 500;
-  color: #152c5b;
 }
 
 .btn-navy {

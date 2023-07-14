@@ -116,7 +116,7 @@
         <div class="content-wrapper">
           <div class="tab-container">            
             <ul class="tab">
-              <li class="tab-menu on"><img class="ic-bookmark on"> 창고 공유정보 종료 <img class="ic-tab-close"> </li>
+              <li class="tab-menu on"><img class="ic-bookmark on"> 차량 부가정보 등록 <img class="ic-tab-close"> </li>
               <li class="tab-menu"><img class="ic-bookmark"> ASN 정보 전송<img class="ic-tab-close"></li>
               <li class="tab-menu"><img class="ic-bookmark">납품오더취소 등록<img class="ic-tab-close"></li>
               <li class="tab-menu"><img class="ic-bookmark">재고조정현황 조회<img class="ic-tab-close"></li>
@@ -136,34 +136,34 @@
               <div class="btn-tab-arrow right on"><img src="" alt=""></div>
             </div>
           </div>
-          <div class="tab-contents DSE010">
+          <div class="tab-contents DSE001">
             <div class="location">    
               <div class="nav-home"><img class="ic-navi-home">Home</div>
               <img class="ic-navi-arrow">물류납품
               <img class="ic-navi-arrow">발주
               <img class="ic-navi-arrow">납입카드 출력
             </div>
-            <div class="search-conditions con-box detail">              
+            <div class="search-conditions con-box">              
               <div class="setting-grid">
-                <div class="setting-grid-title">창고명</div>
+                <div class="setting-grid-title">차량번호</div>
                 <div class="setting-grid-content">  
-                  <div class="input-wrapper">                    
-                    <input type="text" value="울산유통" /> 
+                  <div class="input-wrapper text-edit">                    
+                    <input type="text" value="1234" /> 
                   </div>                
                 </div>
-                <div class="setting-grid-title">사업자등록번호</div>
+                <div class="setting-grid-title">차량번호</div>
                 <div class="setting-grid-content">  
                   <div class="input-wrapper">                    
-                    <input type="text" value="123456789" /> 
+                    <input type="text" value="13노1234" /> 
                   </div>                     
                 </div>
-                <div class="setting-grid-title">대표자명</div>
+                <div class="setting-grid-title">운송사</div>
                 <div class="setting-grid-content">   
                   <div class="input-wrapper">                    
-                    <input type="text" value="홍길동" /> 
+                    <input type="text" value="(주)대주" /> 
                   </div>  
-                </div>
-                <div class="setting-grid-title">사용여부</div>
+                </div>            
+                <div class="setting-grid-title">공유여부</div>
                 <div class="setting-grid-content">      
                   <div class="input-group">
                     <select>
@@ -173,25 +173,126 @@
                       <option value="">옵션3</option>
                     </select>                  
                   </div>           
-                </div>                
+                </div>  
+                <div class="setting-grid-title">사업자등록번호</div>
+                <div class="setting-grid-content">  
+                  <div class="input-wrapper">                    
+                    <input type="text" value="123456789" /> 
+                  </div>                     
+                </div>              
               </div>
               <div class="search-btn-group">
                 <div class="btn-search btn-navy"><img>조회</div>
                 <div class="btn-clear btn-white"><img>초기화</div>
               </div>
             </div>
-            <div class="search-list con-box">
-              <div class="list-top">
-                <div class="list-title ic-title-mark">창고 공유정보</div>
-                <div class="list-btn-group">
-                  <div class="btn-navy btn-end">공유종료</div>                  
+            <div class="list-wrapper">
+              <div class="search-list con-box">
+                <div class="list-top">
+                  <div class="list-title ic-title-mark">차량 부가정보</div>                  
                 </div>
+                <!-- 개발 작업시 그리드 들어갈 부분 -->
+                <div class="list-grid-wrapper">
+                  그리드 영역
+                </div>
+                <!---------------------------------->
               </div>
-              <!-- 개발 작업시 그리드 들어갈 부분 -->
-              <div class="list-grid-wrapper">
-                그리드 영역
+              <div class="search-edit con-box">                
+                <div class="setting-grid">
+                  <div class="setting-grid-title ic-title-nece">하이패스여부</div>
+                  <div class="setting-grid-content">     
+                    <div class="input-group">
+                      <select>
+                        <option value="" selected>Y</option>
+                        <option value="">N</option>                        
+                      </select>                  
+                    </div>                  
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">칸막이여부</div>
+                  <div class="setting-grid-content">     
+                    <div class="input-group">
+                      <select>
+                        <option value="">Y</option>
+                        <option value="" selected>N</option>                        
+                      </select>                  
+                    </div>                  
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">냉동기여부</div>
+                  <div class="setting-grid-content">     
+                    <div class="input-group">
+                      <select>
+                        <option value="">Y</option>
+                        <option value="">N</option>                        
+                      </select>                  
+                    </div>                  
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">에어스포일러여부</div>
+                  <div class="setting-grid-content">     
+                    <div class="input-group">
+                      <select>
+                        <option value="">Y</option>
+                        <option value="">N</option>                        
+                      </select>                  
+                    </div>                  
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">차량출고일자</div>
+                  <div class="setting-grid-content">  
+                    <div class="input-wrapper">
+                      <input type="date" value="2021-02-10" />                         
+                    </div>                
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">차량연식</div>
+                  <div class="setting-grid-content">  
+                    <div class="input-wrapper">                    
+                      <input type="text" value="2021"/> 
+                    </div>                
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">온도기록계여부</div>
+                  <div class="setting-grid-content">     
+                    <div class="input-group">
+                      <select>
+                        <option value="">Y</option>
+                        <option value="" selected>N</option>                        
+                      </select>                  
+                    </div>                  
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">GPS여부</div>
+                  <div class="setting-grid-content">     
+                    <div class="input-group">
+                      <select>
+                        <option value="" selected>Y</option>
+                        <option value="">N</option>                        
+                      </select>                  
+                    </div>                  
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">차량사진</div>
+                  <div class="setting-grid-content">     
+                    <div class="add-pic-wrap">                      
+                      <div class="btn-l-pic-add">
+                        <img>차량사진등록
+                      </div>
+                      <div class="pic-detail">
+                        <div class="btn-pic-delete"></div>
+                        <img src="../assets/pic_sample.png" alt="">
+                        <div class="pic-name">img01.jpg</div>
+                      </div>
+                    </div>      
+                  </div>
+                  <div class="setting-grid-title ic-title-nece">자동차등록증</div>
+                  <div class="setting-grid-content">     
+                    <div class="add-pic-wrap">                      
+                      <div class="btn-l-pic-add">
+                        <img>자동차등록증<br>등록
+                      </div>
+                      <div class="pic-detail">
+                        <div class="btn-pic-delete"></div>
+                        <img src="../assets/pic_sample.png" alt="">
+                        <div class="pic-name">img01.jpg</div>
+                      </div>
+                    </div>      
+                  </div>
+                </div>                
               </div>
-              <!---------------------------------->
             </div>
           </div>          
         </div>

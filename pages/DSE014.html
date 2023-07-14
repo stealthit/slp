@@ -116,7 +116,7 @@
         <div class="content-wrapper">
           <div class="tab-container">            
             <ul class="tab">
-              <li class="tab-menu on"><img class="ic-bookmark on"> 창고 공유정보 종료 <img class="ic-tab-close"> </li>
+              <li class="tab-menu on"><img class="ic-bookmark on"> 기자재 공유정보 종료 <img class="ic-tab-close"> </li>
               <li class="tab-menu"><img class="ic-bookmark"> ASN 정보 전송<img class="ic-tab-close"></li>
               <li class="tab-menu"><img class="ic-bookmark">납품오더취소 등록<img class="ic-tab-close"></li>
               <li class="tab-menu"><img class="ic-bookmark">재고조정현황 조회<img class="ic-tab-close"></li>
@@ -145,29 +145,43 @@
             </div>
             <div class="search-conditions con-box detail">              
               <div class="setting-grid">
-                <div class="setting-grid-title">창고명</div>
+                <div class="setting-grid-title">기자재구분</div>
                 <div class="setting-grid-content">  
-                  <div class="input-wrapper">                    
-                    <input type="text" value="울산유통" /> 
-                  </div>                
+                  <div class="input-group text-edit">
+                    <select>
+                      <option value="" selected>지게차</option>
+                      <option value="">파레트</option>
+                      <option value="">대차</option>                      
+                    </select>                  
+                  </div>                                  
                 </div>
-                <div class="setting-grid-title">사업자등록번호</div>
+                <div class="setting-grid-title">기자재ID</div>
                 <div class="setting-grid-content">  
-                  <div class="input-wrapper">                    
-                    <input type="text" value="123456789" /> 
-                  </div>                     
+                  <div class="input-group">
+                    <select>
+                      <option value="" selected>2023000001</option>
+                      <option value="">옵션1</option>
+                      <option value="">옵션2</option>
+                      <option value="">옵션3</option>
+                    </select>                  
+                  </div>                      
                 </div>
-                <div class="setting-grid-title">대표자명</div>
-                <div class="setting-grid-content">   
-                  <div class="input-wrapper">                    
-                    <input type="text" value="홍길동" /> 
+                <div class="setting-grid-title">기자재업체</div>
+                <div class="setting-grid-content"> 
+                  <div class="input-group">
+                    <select>
+                      <option value="" selected>(주)대주</option>
+                      <option value="">옵션1</option>
+                      <option value="">옵션2</option>
+                      <option value="">옵션3</option>
+                    </select>     
                   </div>  
-                </div>
-                <div class="setting-grid-title">사용여부</div>
+                </div>                 
+                <div class="setting-grid-title">사업자등록번호</div>
                 <div class="setting-grid-content">      
                   <div class="input-group">
                     <select>
-                      <option value="" selected>전체</option>
+                      <option value="" selected>123456789</option>
                       <option value="">옵션1</option>
                       <option value="">옵션2</option>
                       <option value="">옵션3</option>
@@ -182,7 +196,7 @@
             </div>
             <div class="search-list con-box">
               <div class="list-top">
-                <div class="list-title ic-title-mark">창고 공유정보</div>
+                <div class="list-title ic-title-mark">기자재 공유정보</div>
                 <div class="list-btn-group">
                   <div class="btn-navy btn-end">공유종료</div>                  
                 </div>

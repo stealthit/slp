@@ -209,6 +209,18 @@ select, select.select-box {
     gap: 4px;
   }
 }
+.input-time-group {
+  @include flex_center;
+  gap: 4px;
+  height: 100%;
+  font-size: 13px;
+  font-weight: 500;  
+  color: #152c5b;
+  input[type="time"] {
+    flex: 1;
+    height: 100%;    
+  }
+}
 .con-box {
   padding: 10px;
   border-radius: 4px;
@@ -278,7 +290,7 @@ select, select.select-box {
 .setting-etc {
   margin-top: 10px;
   display: flex;
-  padding-right: 100px;
+  &:not(:has(.no-padding)){padding-right: 100px;}  
   .setting-etc-property {
     flex: 1;
     display: flex;
@@ -295,56 +307,7 @@ select, select.select-box {
       font-size: 12px;
       font-weight: bold;    
       color: #5c7099;
-    }
-    .add-pic-wrap {
-      display: flex;
-      gap: 10px;
-      .btn-l-pic-add {
-        cursor: pointer;
-        @include flex_center;
-        flex-direction: column;
-        gap: 4px;
-        width: 80px;
-        height: 80px;        
-        border-radius: 2px;
-        border: dashed 1px #c2c5c8;
-        background-color: #fff;
-        font-size: 11px;
-        font-weight: 500;                
-        color: #5c7099;
-        img {
-          content: url(../assets/ic_add@3x.png);
-          width: 12px;
-          height: 12px;
-        }
-      }      
-      .pic-detail {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        img{
-          width: 80px;
-          height: 80px;
-        }
-        .btn-pic-delete {
-          cursor: pointer;
-          width: 16px;
-          height: 16px;
-          position: absolute;
-          top: 4px;
-          right: 4px;
-          background: url(../assets/bt_img_del@3x.png) no-repeat;
-          background-size : 16px;
-          z-index: 3;
-        }
-        .pic-name {
-          font-size: 12px;
-          font-weight: 500;          
-          color: #172d5a;
-        }
-      }
-    }
+    }    
     .etc-text-box {
       width: 259px;
       height: 82px;      
@@ -354,6 +317,56 @@ select, select.select-box {
       font-size: 12px;
       font-weight: 500;  
       color: #152c5b;
+    }
+  }
+}
+.add-pic-wrap {
+  display: flex;
+  gap: 10px;
+  .btn-l-pic-add {
+    text-align: center;
+    cursor: pointer;
+    @include flex_center;    
+    flex-direction: column;
+    gap: 4px;
+    width: 80px;
+    height: 80px;        
+    border-radius: 2px;
+    border: dashed 1px #c2c5c8;
+    background-color: #fff;
+    font-size: 11px;
+    font-weight: 500;                
+    color: #5c7099;
+    img {
+      content: url(../assets/ic_add@3x.png);
+      width: 12px;
+      height: 12px;
+    }
+  }      
+  .pic-detail {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    img{
+      width: 80px;
+      height: 80px;
+    }
+    .btn-pic-delete {
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      background: url(../assets/bt_img_del@3x.png) no-repeat;
+      background-size : 16px;
+      z-index: 3;
+    }
+    .pic-name {
+      font-size: 12px;
+      font-weight: 500;          
+      color: #172d5a;
     }
   }
 }
