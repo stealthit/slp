@@ -227,7 +227,20 @@ select, select.select-box {
   box-shadow: 0 3px 15px 0 rgba(42, 97, 255, 0.1);
   background-color: #fff;
 }
-
+.edit-btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-right: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  button {
+    padding: 3px 10px 2px;
+    height: 24px;
+    @include flex_center;
+    gap: 7px;
+  }
+}
 .setting-grid {
   display: grid;
   grid-template-columns: 110px 1fr 110px 1fr 110px 1fr;
@@ -451,4 +464,34 @@ select, select.select-box {
   width: 10px;
   height: 10px;  
   transform:rotate(90deg);
+}
+.ic-bt-reset {
+  content: url(../assets/ic_bt_reset@3x.png);
+  width: 11px;
+  height: 11px;  
+}
+.ic-line-plus {
+  content: url(../assets/ic_line_plus@3x.png);
+  width: 11px;
+  height: 11px;  
+}
+.ic-line-minus {
+  content: url(../assets/ic_line_minus@3x.png);
+  width: 11px;
+  height: 11px;  
+}
+.ic-edit {
+  content: url(../assets/ic_edit@3x.png);
+  width: 11px;
+  height: 11px;  
+}
+.ic-register {
+  content: url(../assets/ic_register@3x.png);
+  width: 11px;
+  height: 11px;  
+}
+.ic-bt-save {
+  content: url(../assets/ic_bt_save@3x.png);
+  width: 11px;
+  height: 11px;  
 }

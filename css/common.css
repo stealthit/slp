@@ -272,6 +272,34 @@ select option, select.select-box option {
   background-color: #fff;
 }
 
+.edit-btn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 8px;
+  padding-right: 10px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.edit-btn-wrapper button {
+  padding: 3px 10px 2px;
+  height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 7px;
+}
+
 .setting-grid {
   display: -ms-grid;
   display: grid;
@@ -633,5 +661,41 @@ select option, select.select-box option {
   height: 10px;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+
+.ic-bt-reset {
+  content: url(../assets/ic_bt_reset@3x.png);
+  width: 11px;
+  height: 11px;
+}
+
+.ic-line-plus {
+  content: url(../assets/ic_line_plus@3x.png);
+  width: 11px;
+  height: 11px;
+}
+
+.ic-line-minus {
+  content: url(../assets/ic_line_minus@3x.png);
+  width: 11px;
+  height: 11px;
+}
+
+.ic-edit {
+  content: url(../assets/ic_edit@3x.png);
+  width: 11px;
+  height: 11px;
+}
+
+.ic-register {
+  content: url(../assets/ic_register@3x.png);
+  width: 11px;
+  height: 11px;
+}
+
+.ic-bt-save {
+  content: url(../assets/ic_bt_save@3x.png);
+  width: 11px;
+  height: 11px;
 }
 /*# sourceMappingURL=common.css.map */
