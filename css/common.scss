@@ -31,7 +31,7 @@ input[type=text],input[type=date],input[type=month] {
 }
 input[type=date],input[type=month],input[type=time] {
   position: relative;
-  height: 100%;
+  // height: 100%;
   padding-left: 10px;
   border-radius: 2px;
   border: solid 1px #c2c5c8;
@@ -209,17 +209,24 @@ select, select.select-box {
     gap: 4px;
   }
 }
-.input-time-group {
+.input-time-group, .input-text-group, .input-date-group {
   @include flex_center;
   gap: 4px;
   height: 100%;
   font-size: 13px;
   font-weight: 500;  
   color: #152c5b;
-  input[type="time"] {
+   input[type="time"] {
     flex: 1;
     height: 100%;    
   }
+}
+.list-btn-group {
+  display: flex;  
+  gap: 10px; 
+  font-size: 12px;
+
+  button {height: 24px;padding: 3px 10px 2px;}
 }
 .con-box {
   padding: 10px;
@@ -230,10 +237,12 @@ select, select.select-box {
 .edit-btn-wrapper {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: 8px;
   padding-right: 10px;
   font-size: 12px;
   font-weight: bold;
+  color: #5c7099;
   button {
     padding: 3px 10px 2px;
     height: 24px;
@@ -241,6 +250,12 @@ select, select.select-box {
     gap: 7px;
   }
 }
+.gap-10 {gap: 10px !important;}
+.gap-15 {gap: 15px !important;}
+.gap-20 {gap: 20px !important;}
+.w-auto {width: auto !important;}
+.w-120 {width: 120px;}
+.w-160 {width: 160px !important;}
 .setting-grid {
   display: grid;
   grid-template-columns: 110px 1fr 110px 1fr 110px 1fr;
@@ -282,7 +297,8 @@ select, select.select-box {
       }
     }
   }
-  .span-3 {grid-column: span 3; width: calc(100% - ((100% - 650px) / 2));}
+  .span-3 {grid-column: span 3; width: calc(100% - ((100% - 650px) / 2));}  
+
   &.grid-check-line {
     grid-template-columns: 110px 1fr;
     grid-template-rows: auto;
@@ -419,12 +435,77 @@ select, select.select-box {
     background-color: #172d5a;
   }
 }
+.ic-dot {
+  display: flex;
+  align-items: center;
+  &::before {
+    display: block;
+    content: "";
+    width: 3px;
+    height: 3px;  
+    margin: 12px 3px 11px 0;
+
+    background-color: #172d5a;
+  }
+}
 .list-title {
   font-size: 14px;
   font-weight: bold;                
   line-height: 2;                
   color: #152c5b;
 }
+#modal-background {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+#modal-background {z-index: 10;}
+.modal-con {z-index: 20;}
+.modal-con {  
+  padding: 0 10px;
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+
+  .modal-top {   
+    height: 40px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .box-title {
+      font-size: 14px;
+      font-weight: bold;      
+      color: #172d5a;
+    }
+  }
+  .modal-body {
+    flex: 1;
+  }
+  .modal-bottom {
+    @include flex_center;
+    margin: 10px 0;    
+    button {
+      @include flex_center;
+      height: 26px;
+      width: 60px;
+      border-radius: 2px;
+      border: solid 1px #9aa6b8;
+      background-color: #fff;
+      font-size: 12px;
+      font-weight: bold;  
+      color: 5c7099
+    }
+  }
+}
+
 @include menu_images(ic_left_1_1);
 @include menu_images(ic_left_1_2);
 @include menu_images(ic_left_1_3);
@@ -465,6 +546,16 @@ select, select.select-box {
   height: 10px;  
   transform:rotate(90deg);
 }
+.ic-bt-add {
+  content: url(../assets/ic_bt_add@3x.png);
+  width: 11px;
+  height: 11px;  
+}
+.ic-bt-delete {
+  content: url(../assets/ic_bt_delete@3x.png);
+  width: 11px;
+  height: 11px;  
+}
 .ic-bt-reset {
   content: url(../assets/ic_bt_reset@3x.png);
   width: 11px;
@@ -494,4 +585,9 @@ select, select.select-box {
   content: url(../assets/ic_bt_save@3x.png);
   width: 11px;
   height: 11px;  
+}
+.bt-popup-close {
+  background: url(../assets/bt_popup_close.svg);
+  width: 12px;
+  height: 12px;  
 }

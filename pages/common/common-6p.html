@@ -5,15 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
   <title>Document</title>
-  <link rel="stylesheet" href="../css/common.css">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/style.css">
   <script></script>
 </head>
 <body>
   <div class="wrapper">
     <div class="header">
       <div class="header-logo">
-        <img src="../assets/img_logo@3x.png" alt="" width="19" height="19">
+        <img src="../../assets/img_logo@3x.png" alt="" width="19" height="19">
         스마트물류플랫폼
       </div>      
       <div class="header-center">
@@ -32,7 +32,7 @@
         </div>
       </div>
       <div class="header-favorite">
-        <img src="../assets/ic_bookmark_on@3x.png" alt="" width="16" height="16">
+        <img src="../../assets/ic_bookmark_on@3x.png" alt="" width="16" height="16">
         즐겨찾기
       </div>      
     </div>
@@ -116,7 +116,7 @@
         <div class="content-wrapper">
           <div class="tab-container">            
             <ul class="tab">
-              <li class="tab-menu on"><img class="ic-bookmark on"> 기자재 공유정보 종료 <img class="ic-tab-close"> </li>
+              <li class="tab-menu on"><img class="ic-bookmark on"> 할당관리 <img class="ic-tab-close"> </li>
               <li class="tab-menu"><img class="ic-bookmark"> ASN 정보 전송<img class="ic-tab-close"></li>
               <li class="tab-menu"><img class="ic-bookmark">납품오더취소 등록<img class="ic-tab-close"></li>
               <li class="tab-menu"><img class="ic-bookmark">재고조정현황 조회<img class="ic-tab-close"></li>
@@ -139,67 +139,78 @@
           <div class="tab-contents DSE010">
             <div class="location">    
               <div class="nav-home"><img class="ic-navi-home">Home</div>
-              <img class="ic-navi-arrow">물류납품
-              <img class="ic-navi-arrow">발주
-              <img class="ic-navi-arrow">납입카드 출력
+              <img class="ic-navi-arrow">창고
+              <img class="ic-navi-arrow">출고
+              <img class="ic-navi-arrow">할당관리
             </div>
             <div class="search-conditions con-box">              
               <div class="setting-grid">
-                <div class="setting-grid-title">기자재구분</div>
-                <div class="setting-grid-content">  
-                  <div class="input-group text-edit">
-                    <select>
-                      <option value="" selected>지게차</option>
-                      <option value="">파레트</option>
-                      <option value="">대차</option>                      
-                    </select>                  
-                  </div>                                  
-                </div>
-                <div class="setting-grid-title">기자재ID</div>
+                <div class="setting-grid-title">창고</div>
                 <div class="setting-grid-content">  
                   <div class="input-group">
-                    <select>
-                      <option value="" selected>2023000001</option>
+                    <select>                      
                       <option value="">옵션1</option>
                       <option value="">옵션2</option>
                       <option value="">옵션3</option>
                     </select>                  
-                  </div>                      
-                </div>
-                <div class="setting-grid-title">기자재업체</div>
-                <div class="setting-grid-content"> 
-                  <div class="input-group">
-                    <select>
-                      <option value="" selected>(주)대주</option>
-                      <option value="">옵션1</option>
-                      <option value="">옵션2</option>
-                      <option value="">옵션3</option>
-                    </select>     
-                  </div>  
-                </div>                 
-                <div class="setting-grid-title">사업자등록번호</div>
-                <div class="setting-grid-content">      
-                  <div class="input-group">
-                    <select>
-                      <option value="" selected>123456789</option>
-                      <option value="">옵션1</option>
-                      <option value="">옵션2</option>
-                      <option value="">옵션3</option>
-                    </select>                  
-                  </div>           
+                  </div>                
                 </div>                
+                <div class="setting-grid-title">할당그룹키</div>
+                <div class="setting-grid-content">      
+                  <div class="input-wrapper">                    
+                    <input type="text" value="" /> 
+                  </div>             
+                </div>       
+                <div class="setting-grid-title">출고작업유형</div>
+                <div class="setting-grid-content">  
+                  <div class="input-group">
+                    <select>                      
+                      <option value="">옵션1</option>
+                      <option value="">옵션2</option>
+                      <option value="">옵션3</option>
+                    </select>                  
+                  </div>                
+                </div>     
+                <div class="setting-grid-title">작업상태</div>
+                <div class="setting-grid-content">  
+                  <div class="input-group">
+                    <select>                      
+                      <option value="">옵션1</option>
+                      <option value="">옵션2</option>
+                      <option value="">옵션3</option>
+                    </select>                  
+                  </div>                
+                </div>          
+                <div class="setting-grid-title">출고예정일</div>
+                <div class="setting-grid-content">      
+                  <div class="input-date-group">
+                    <input type="date" value="2022-01-01"/>
+                    <span>~</span>
+                    <input type="date" value="2022-06-01"/>
+                  </div>           
+                </div>  
               </div>
               <div class="search-btn-group">
                 <div class="btn-search btn-navy"><img>조회</div>
                 <div class="btn-clear btn-white"><img>초기화</div>
               </div>
             </div>
-            <div class="search-list con-box">
+            <div class="edit-btn-wrapper">              
+              <button class="btn-navy"><img class="ic-bt-save">저장</button>
+            </div>
+            <div class="search-list con-box">              
               <div class="list-top">
-                <div class="list-title ic-title-mark">기자재 공유정보</div>
-                <div class="list-btn-group">
-                  <div class="btn-navy btn-end">공유종료</div>                  
-                </div>
+                <div class="list-title ic-title-mark">출고정보</div>                
+              </div>
+              <!-- 개발 작업시 그리드 들어갈 부분 -->
+              <div class="list-grid-wrapper">
+                그리드 영역
+              </div>
+              <!---------------------------------->
+            </div>
+            <div class="search-list con-box">              
+              <div class="list-top">
+                <div class="list-title ic-title-mark">부품정보</div>                
               </div>
               <!-- 개발 작업시 그리드 들어갈 부분 -->
               <div class="list-grid-wrapper">
@@ -214,8 +225,8 @@
     </div>
   </div>
 
-  <script src="../scripts/jquery-3.6.0.min.js"></script>
-  <script src="../scripts/jquery-ui.min.js"></script>
-  <script src="../scripts/script.js"></script>
+  <script src="../../scripts/jquery-3.6.0.min.js"></script>
+  <script src="../../scripts/jquery-ui.min.js"></script>
+  <script src="../../scripts/script.js"></script>
 </body>
 </html>
