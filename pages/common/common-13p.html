@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <script></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <div class="header-logo">
+        <img src="../../assets/img_logo@3x.png" alt="" width="19" height="19">
+        스마트물류플랫폼
+      </div>      
+      <div class="header-center">
+        <ul class="main-menu">
+          <li class="active">물류납품</li>
+          <li>물류창고</li>
+          <li>물류운송</li>
+          <li>물류관제</li>
+          <li>물류공유</li>
+          <li>운영관리</li>
+          <li>시스템관리</li>
+        </ul>
+        <div class="header-info">            
+            <div class="user-info">회사명 · 홍길동님</div>
+            <button class="btn-logout">로그아웃</button>
+        </div>
+      </div>
+      <div class="header-favorite">
+        <img src="../../assets/ic_bookmark_on@3x.png" alt="" width="16" height="16">
+        즐겨찾기
+      </div>      
+    </div>
+    <div class="main-wrapper">
+      <!-- sidebar menu -->
+      <button class="btn-sidebar show"><img></button>
+      <div class="sidebar-container show">
+        <div class="sidebar-menu-wrapper">
+          <details open class="active">
+            <summary>
+              <div class="submenu-title"><img class="ic_left_1_1 active"> 발주 </div>
+              <img class="ic-submenu-open">
+            </summary>
+            <ul class="details-submenu">
+              <li>입고오더등록</li>
+              <li class="active">납입카드 출력</li>
+              <li>ASN 등록</li>
+              <li>ASN 정보 전송</li>
+              <li>입고현황조회</li>
+              <li>취소 ASN 선택</li>
+              <li>ASN 취소 등록</li>
+              <li>취소 정보 전송</li>
+            </ul>
+          </details>  
+          <details>
+            <summary>
+              <div class="submenu-title"><img class="ic_left_1_2"> 수주 </div>              
+              <img class="ic-submenu-open">
+            </summary>
+            <ul class="details-submenu">
+              <li>납품오더수신(I/F)</li>
+              <li>납품오더등록</li>
+              <li>납품취소 선택</li>
+              <li>납품오더취소 등록</li>
+              <li>납품취소 정보 전송</li>
+              <li>출고오더정보 생성</li>
+              <li>출고오더정보 전송</li>
+              <li>운송오더정보 생성</li>
+              <li>운송오더정보 전송</li>
+              <li>납품현황조회</li>
+            </ul>
+          </details>  
+          <details>
+            <summary>
+              <div class="submenu-title"><img class="ic_left_1_4"> 재고 </div>              
+              <img class="ic-submenu-open">
+            </summary>
+            <ul class="details-submenu">
+              <li>재고현황조회</li>
+              <li>재고조정지시</li>
+              <li>재고조정지시 전송</li>
+              <li>재고조정현황 조회</li>
+              <li>재고조정취소 선택</li>
+              <li>재고조정취소 등록</li>
+              <li>취소지시전송</li>
+            </ul>
+          </details>  
+          <details>
+            <summary>
+              <div class="submenu-title"><img class="ic_left_1_3"> 반품 </div>              
+              <img class="ic-submenu-open">
+            </summary>
+            <ul class="details-submenu">
+              <li>반출오더등록</li>
+              <li>반출오더전송</li>
+              <li>반출증출력리포트</li>
+              <li>반출현황조회</li>
+              <li>반출취소 선택</li>
+              <li>반출취소 등록</li>
+              <li>반출취소 전송</li>
+              <li>회수오더등록</li>
+              <li>회수오더전송</li>
+              <li>회수현황조회</li>
+            </ul>
+          </details>         
+        </div>
+        <div class="siderbar-help">도움말</div>
+      </div>
+      <!-- //sidebar menu -->
+      <main id="content" class="main-content">
+        <div class="content-wrapper">
+          <div class="tab-container">            
+            <ul class="tab">
+              <li class="tab-menu on"><img class="ic-bookmark on"> 알람조치 플로우등록 <img class="ic-tab-close"> </li>
+              <li class="tab-menu"><img class="ic-bookmark"> ASN 정보 전송<img class="ic-tab-close"></li>
+              <li class="tab-menu"><img class="ic-bookmark">납품오더취소 등록<img class="ic-tab-close"></li>
+              <li class="tab-menu"><img class="ic-bookmark">재고조정현황 조회<img class="ic-tab-close"></li>
+              <li class="tab-menu"><img class="ic-bookmark">반출취소 선택<img class="ic-tab-close"></li>
+              <li class="tab-menu"><img class="ic-bookmark">입수량<img class="ic-tab-close"></li>
+              <li class="tab-menu"><img class="ic-bookmark">반품등록<img class="ic-tab-close"></li>
+              <li class="tab-menu"><img class="ic-bookmark">피킹처리<img class="ic-tab-close"></li>
+              <li class="tab-menu"><img class="ic-bookmark">반출출고지시등록<img class="ic-tab-close"></li>
+              <li class="tab-menu"><img class="ic-bookmark">재고실사지시등록<img class="ic-tab-close"></li>
+              <li class="tab-menu"><img class="ic-bookmark">운송오더상세<img class="ic-tab-close"></li>
+              <li class="tab-menu"><img class="ic-bookmark">상차/하차처리<img class="ic-tab-close"></li>
+              <li class="tab-menu"><img class="ic-bookmark">팔렛타이징처리-PDA<img class="ic-tab-close"></li>
+              <li class="tab-menu"><img class="ic-bookmark">긴급오더추가<img class="ic-tab-close"></li>              
+            </ul>
+            <div class="tab-arrow-wrapper">
+              <div class="btn-tab-arrow left"><img src="" alt=""></div>
+              <div class="btn-tab-arrow right on"><img src="" alt=""></div>
+            </div>
+          </div>
+          <div class="tab-contents common13">
+            <div class="location">    
+              <div class="nav-home"><img class="ic-navi-home">Home</div>
+              <img class="ic-navi-arrow">알람 조치 플로우 등록
+            </div>
+            <div class="search-conditions con-box">              
+              <div class="setting-grid">
+                <div class="setting-grid-title">알람 카테고리</div>
+                <div class="setting-grid-content">  
+                  <div class="input-group">
+                    <select>      
+                      <option value="" selected></option>                
+                      <option value="">옵션1</option>
+                      <option value="">옵션2</option>
+                      <option value="">옵션3</option>
+                    </select>                  
+                  </div>                
+                </div>    
+                <div class="setting-grid-title">알람 코드</div>
+                <div class="setting-grid-content">  
+                  <div class="input-group">
+                    <select>      
+                      <option value="" selected></option>                
+                      <option value="">옵션1</option>
+                      <option value="">옵션2</option>
+                      <option value="">옵션3</option>
+                    </select>                  
+                  </div>                
+                </div>                                                       
+              </div>
+              <div class="search-btn-group">
+                <div class="btn-search btn-navy"><img>조회</div>
+                <div class="btn-clear btn-white"><img>초기화</div>
+              </div>
+            </div>
+            <div class="edit-btn-wrapper">
+              <button class="btn-white"><img class="ic-edit">수정</button>              
+              <button class="btn-white"><img class="ic-bt-reset"> 초기화</button>
+              <button class="btn-navy"><img class="ic-bt-save">저장</button>
+            </div>
+            <div class="flex-row">
+              <div class="search-list con-box flex-1">
+                <div class="list-top">
+                  <div class="list-title ic-title-mark">알람 리스트</div>                  
+                </div>
+                <!-- 개발 작업시 그리드 들어갈 부분 -->
+                <div class="list-grid-wrapper">
+                  그리드 영역
+                </div>
+                <!---------------------------------->
+              </div>              
+              <div class="search-list con-box alarm-action">              
+                <div class="list-top">
+                  <div class="list-title ic-title-mark">조치 방식 선택</div>                
+                </div>
+                <div class="alarm-box">
+                  <div class="box-row line-1">
+                    <div class="box-title">
+                      <div class="check-box">
+                        <input type="checkbox" name="" id="">통보 방식 선택
+                      </div>
+                    </div>
+                    <div class="box-content">
+                      <div class="check-box">
+                        <input type="checkbox" name="" id="">E-MAIL
+                        <button type="button" class="btn-white">추가</button>
+                      </div>
+                      <div class="check-box">
+                        <input type="checkbox" name="" id="">SMS
+                        <button type="button" class="btn-white">추가</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-row line-1">
+                    <div class="box-title">
+                      <div class="check-box">
+                        <input type="checkbox" name="" id="">알람 조치 등록
+                      </div>
+                    </div>
+                    <div class="box-content">
+                      <div class="radio-group">
+                        <input type="radio" id="rd1" name="rd" value="1"><label for="rd1">알람 종료</label>                        
+                      </div>    
+                      <div class="radio-group">
+                        <input type="radio" id="rd2" name="rd" value="2"><label for="rd2">알람 조치</label>                        
+                      </div>    
+                    </div>
+                  </div>
+                  <div class="box-row">
+                    <div class="box-title no-title"></div>
+                    <div class="box-content multi-line">
+                      <div class="input-check-group">
+                        <div class="check-box">
+                          <input type="checkbox" name="" id="">조치 시작                          
+                        </div>
+                        <div class="check-box">
+                          <input type="checkbox" name="" id="">조치 시작 통보                          
+                        </div>
+                      </div>
+                      <div class="input-check-group">
+                        <div class="check-box">
+                          <input type="checkbox" name="" id="">조치 시작                          
+                        </div>
+                        <div class="check-box">
+                          <input type="checkbox" name="" id="">조치 시작 통보                          
+                        </div>
+                      </div>
+                      <div class="alarm-end-radio">
+                        <div class="alarm-title">알람 종료</div>
+                        <div class="radio-group">
+                          <input type="radio" id="rd2-1" name="rd2" value="1"><label for="rd2-1">자동 종료</label>                        
+                        </div>  
+                        <div class="radio-group">
+                          <input type="radio" id="rd2-2" name="rd2" value="2"><label for="rd2-2">담당자 확인 종료</label> 
+                          <button type="button" class="btn-white">추가</button>                      
+                        </div>   
+                      </div>
+                      <div class="alarm-row">
+                        <div class="alarm-title">특이사항</div>
+                        <div class="text-box"><textarea></textarea></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="edit-btn-wrapper">
+              <button class="btn-white"><img class="ic-bt-add">추가</button>
+              <button class="btn-white"><img class="ic-bt-delete">삭제</button>              
+              <button class="btn-navy"><img class="ic-bt-save">저장</button>
+            </div>
+            <div class="flex-col con-box flex-1">
+              <ul class="list-tab">
+                <li class="list-tab-menu on" data-tab="list-tab01">이메일</li>                           
+                <li class="list-tab-menu" data-tab="list-tab02">SMS</li>                           
+                <li class="list-tab-menu" data-tab="list-tab03">담당자</li>                           
+              </ul>
+              <div class="list-tab-content active" id="list-tab01">
+                <div class="search-list">              
+                  <div class="list-top">
+                    <div class="list-title ic-title-mark">사용자 이메일 리스트</div>                                
+                  </div>
+                  <!-- 개발 작업시 그리드 들어갈 부분 -->
+                  <div class="list-grid-wrapper">
+                    그리드 영역
+                  </div>
+                  <!---------------------------------->
+                </div>
+              </div>
+              <div class="list-tab-content" id="list-tab02">
+                <div class="search-list">              
+                  <div class="list-top">
+                    <div class="list-title ic-title-mark">사용자 SMS 리스트</div>                                
+                  </div>
+                  <!-- 개발 작업시 그리드 들어갈 부분 -->
+                  <div class="list-grid-wrapper">
+                    그리드 영역
+                  </div>
+                  <!---------------------------------->
+                </div>
+              </div>
+              <div class="list-tab-content" id="list-tab03">
+                <div class="search-list">              
+                  <div class="list-top">
+                    <div class="list-title ic-title-mark">담당자 리스트</div>                                
+                  </div>
+                  <!-- 개발 작업시 그리드 들어갈 부분 -->
+                  <div class="list-grid-wrapper">
+                    그리드 영역
+                  </div>
+                  <!---------------------------------->
+                </div>
+              </div>
+            </div>
+          </div>          
+        </div>
+        <div class="footer">Copyright © 스마트물류플랫폼 All right reserved.</div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../../scripts/jquery-3.6.0.min.js"></script>
+  <script src="../../scripts/jquery-ui.min.js"></script>
+  <script src="../../scripts/script.js"></script>
+</body>
+</html>

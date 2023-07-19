@@ -20,9 +20,11 @@ body {
 
 textarea {
   padding: 4px 8px;
+  width: 100%;
+  height: 100%;
 }
 
-input[type=text], input[type=date], input[type=month] {
+input[type=text], input[type=date], input[type=month], input[type=time] {
   width: 120px;
   height: 26px;
   padding: 4px 8px 3px;
@@ -31,7 +33,7 @@ input[type=text], input[type=date], input[type=month] {
   background-color: #fff;
 }
 
-input[type=text]:disabled, input[type=date]:disabled, input[type=month]:disabled {
+input[type=text]:disabled, input[type=date]:disabled, input[type=month]:disabled, input[type=time]:disabled {
   border-radius: 2px;
   border: solid 1px #e2e5e9;
   background-color: #f8f7f7;
@@ -51,12 +53,15 @@ input[type=date], input[type=month], input[type=time] {
 
 input[type=date]::-webkit-clear-button,
 input[type=date]::-webkit-inner-spin-button,
+input[type=time]::-webkit-clear-button,
+input[type=time]::-webkit-inner-spin-button,
 input[type=month]::-webkit-clear-button,
 input[type=month]::-webkit-inner-spin-button {
   display: none;
 }
 
 input[type=date]::-webkit-calendar-picker-indicator,
+input[type=time]::-webkit-calendar-picker-indicator,
 input[type=month]::-webkit-calendar-picker-indicator {
   background: transparent;
   z-index: 1;
@@ -68,6 +73,17 @@ input[type=date]:after, input[type=month]:after {
   width: 9px;
   height: 9px;
   content: url("../assets/ic_input_cal.png");
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 0;
+}
+
+input[type=time]:after {
+  position: absolute;
+  right: 8px;
+  width: 9px;
+  height: 9px;
+  content: url("../assets/ic_input_clock.png");
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 0;
@@ -207,8 +223,64 @@ select option, select.select-box option {
   background-position-y: center;
 }
 
+.quantity {
+  height: 100%;
+}
+
+.quantity input {
+  width: 100%;
+  height: 100%;
+  line-height: 1.65;
+  float: left;
+  display: block;
+  padding: 0;
+  margin: 0;
+  padding-left: 20px;
+  border: 1px solid #eee;
+}
+
+.quantity input:focus {
+  outline: 0;
+}
+
+.quantity-nav {
+  float: left;
+  position: relative;
+  height: 26px;
+}
+
+.quantity-button {
+  position: relative;
+  cursor: pointer;
+  border-left: 1px solid #e2e5e9;
+  width: 23px;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.quantity-button.quantity-up {
+  position: absolute;
+  height: 50%;
+  top: 0;
+  border-bottom: 1px solid #e2e5e9;
+  background: url(../assets/ic_input_up.png) no-repeat center right 8px;
+}
+
+.quantity-button.quantity-down {
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  background: url(../assets/ic_input_down.png) no-repeat center right 8px;
+}
+
 .input-group {
-  width: 260px;
+  max-width: 260px;
+  min-width: 120px;
   height: 26px;
   border-radius: 2px;
   border: solid 1px #c2c5c8;
@@ -231,11 +303,14 @@ select option, select.select-box option {
   color: #152c5b;
 }
 
-.input-check-group .check-box {
+.check-box {
   white-space: nowrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 4px;
 }
 
@@ -316,6 +391,36 @@ select option, select.select-box option {
   gap: 7px;
 }
 
+.flex-1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.flex-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.flex-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
 .gap-10 {
   gap: 10px !important;
 }
@@ -338,6 +443,44 @@ select option, select.select-box option {
 
 .w-160 {
   width: 160px !important;
+}
+
+.search-btn-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 10px;
+  width: 80px;
+  line-height: 1.58;
+}
+
+.search-btn-group .btn-search {
+  height: 26px;
+}
+
+.search-btn-group .btn-search img {
+  content: url(../assets/ic_bt_search@3x.png);
+  width: 11px;
+  height: 11px;
+  margin-right: 18px;
+}
+
+.search-btn-group .btn-clear {
+  height: 26px;
+}
+
+.search-btn-group .btn-clear img {
+  content: url(../assets/ic_bt_reset@3x.png);
+  width: 11px;
+  height: 11px;
+  margin-right: 12px;
 }
 
 .setting-grid {
@@ -373,7 +516,8 @@ select option, select.select-box option {
   font-size: 12px;
   font-weight: 500;
   color: #152c5b;
-  width: 260px;
+  max-width: 260px;
+  min-width: 120px;
 }
 
 .setting-grid .setting-grid-content .text-edit {
@@ -392,7 +536,7 @@ select option, select.select-box option {
   gap: 10px;
 }
 
-.setting-grid .setting-grid-content .input-wrapper input[type="text"], .setting-grid .setting-grid-content .input-wrapper input[type="date"] {
+.setting-grid .setting-grid-content .input-wrapper input[type="text"] {
   width: 100%;
 }
 
@@ -658,7 +802,6 @@ select option, select.select-box option {
 }
 
 .modal-con {
-  padding: 0 10px;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -669,10 +812,12 @@ select option, select.select-box option {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background: #fff;
+  background: #f4f5f5;
 }
 
 .modal-con .modal-top {
+  padding: 0 10px;
+  margin-bottom: 10px;
   height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -683,6 +828,8 @@ select option, select.select-box option {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: #fff;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .modal-con .modal-top .box-title {
@@ -692,9 +839,24 @@ select option, select.select-box option {
 }
 
 .modal-con .modal-body {
+  padding: 0 10px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+.modal-con .modal-body .search-conditions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-con .modal-body .search-conditions .setting-grid {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -ms-grid-columns: 90px 1fr 90px 1fr;
+      grid-template-columns: 90px 1fr 90px 1fr;
 }
 
 .modal-con .modal-bottom {
@@ -707,6 +869,7 @@ select option, select.select-box option {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 7px;
   margin: 10px 0;
 }
 
@@ -720,14 +883,78 @@ select option, select.select-box option {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 26px;
-  width: 60px;
+  padding: 3px 10px 2px;
   border-radius: 2px;
   border: solid 1px #9aa6b8;
-  background-color: #fff;
   font-size: 12px;
   font-weight: bold;
-  color: 5c7099;
+}
+
+ul.list-tab {
+  width: 100%;
+  border-bottom: 1px solid #c2c5c8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 24px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+ul.list-tab li.list-tab-menu {
+  cursor: pointer;
+  height: 24px;
+  padding: 3px 10px 2px;
+  border: solid 1px #c2c5c8;
+  background-color: #fff;
+  color: #888;
+  border-radius: 2px;
+  border: solid 1px #c2c5c8;
+  background-color: #fff;
+}
+
+ul.list-tab li.list-tab-menu.on {
+  border: solid 1px #172d5a;
+  color: #172d5a;
+}
+
+.list-tab-content {
+  display: none;
+  width: 100%;
+}
+
+.list-tab-content.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.list-tab-content .list-grid-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.list-tab-content .search-list {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .ic_left_1_1 {
@@ -856,6 +1083,12 @@ select option, select.select-box option {
 
 .ic-bt-save {
   content: url(../assets/ic_bt_save@3x.png);
+  width: 11px;
+  height: 11px;
+}
+
+.ic-bt-list-move {
+  content: url(../assets/ic_bt_list_move@3x.png);
   width: 11px;
   height: 11px;
 }

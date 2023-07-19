@@ -64,6 +64,16 @@ $(".btn-sidebar").on("click", function(){
     else rightBtn.addClass("on");
   }
 //end tab--------------------------------------------------------
+// list-tab  
+  $("ul.list-tab li").click(function () {
+    const tabId = $(this).attr("data-tab");
+
+    $("ul.list-tab li").removeClass("on");
+    $(".list-tab-content").removeClass("active");
+
+    $(this).addClass("on");
+    $("#" + tabId).addClass("active");
+  });
 // search detail button ---------------------------------------
 $(".btn-search-detail").on("click", function(){
   if ($(this).hasClass("open")) {
@@ -76,3 +86,38 @@ $(".btn-search-detail").on("click", function(){
     $(".search-conditions").animate({height: elHeight});
   }
 })
+
+
+// input number spin button
+jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up"></div><div class="quantity-button quantity-down"></div></div>').insertAfter('.quantity input');
+    jQuery('.quantity').each(function() {
+      var spinner = jQuery(this),
+        input = spinner.find('input[type="number"]'),
+        btnUp = spinner.find('.quantity-up'),
+        btnDown = spinner.find('.quantity-down'),
+        min = input.attr('min'),
+        max = input.attr('max');
+
+      btnUp.click(function() {
+        var oldValue = parseFloat(input.val());
+        if (oldValue >= max) {
+          var newVal = oldValue;
+        } else {
+          var newVal = oldValue + 1;
+        }
+        spinner.find("input").val(newVal);
+        spinner.find("input").trigger("change");
+      });
+
+      btnDown.click(function() {
+        var oldValue = parseFloat(input.val());
+        if (oldValue <= min) {
+          var newVal = oldValue;
+        } else {
+          var newVal = oldValue - 1;
+        }
+        spinner.find("input").val(newVal);
+        spinner.find("input").trigger("change");
+      });
+
+    });
