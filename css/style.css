@@ -1006,4 +1006,142 @@
   -ms-grid-columns: 90px 1fr;
       grid-template-columns: 90px 1fr;
 }
+
+.login-wrapper {
+  background: #f4f5f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login-wrapper .login-wrap {
+  padding: 70px 0 20px 0;
+  width: 360px;
+  height: 460px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.login-wrapper .login-wrap .login-title-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.login-wrapper .login-wrap .login-title-wrap .login-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+  font-size: 22px;
+  text-align: center;
+  color: #172d5a;
+}
+
+.login-wrapper .login-wrap .login-title-wrap .login-title span {
+  font-size: 12px;
+  line-height: 1.08;
+}
+
+.login-wrapper .login-wrap .input-login-wrapper {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.login-wrapper .login-wrap .input-login-wrapper .ic-id {
+  width: 240px;
+  background: url(../assets/ic_login_id.svg) no-repeat 5% center;
+  padding-left: 30px;
+}
+
+.login-wrapper .login-wrap .input-login-wrapper .ic-pw {
+  width: 240px;
+  background: url(../assets/ic_login_pw.svg) no-repeat 5% center;
+  padding-left: 30px;
+}
+
+.login-wrapper .login-wrap .input-login-wrapper .btn-login {
+  width: 240px;
+  height: 35px;
+  padding: 8px 104px;
+  border-radius: 2px;
+  background-color: #172d5a;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.58;
+  text-align: center;
+  color: #fff;
+}
+
+.login-wrapper .login-wrap .input-login-wrapper .join-find {
+  height: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #888;
+}
+
+.login-wrapper .login-wrap .input-login-wrapper .join-find .v-line {
+  width: 1px;
+  height: 12px;
+  background-color: #e2e5e9;
+}
+
+.login-wrapper .login-wrap .copyright {
+  white-space: nowrap;
+  height: 12px;
+  margin: 74px 32px 0;
+  opacity: 0.7;
+  font-family: NotoSansCJKkr;
+  font-size: 8px;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  color: #8591aa;
+}
 /*# sourceMappingURL=style.css.map */

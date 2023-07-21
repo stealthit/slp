@@ -24,7 +24,7 @@ textarea {
   height: 100%;
 }
 
-input[type=text], input[type=date], input[type=month], input[type=time] {
+input[type=text], input[type=password], input[type=date], input[type=month], input[type=time] {
   width: 120px;
   height: 26px;
   padding: 4px 8px 3px;
@@ -33,7 +33,7 @@ input[type=text], input[type=date], input[type=month], input[type=time] {
   background-color: #fff;
 }
 
-input[type=text]:disabled, input[type=date]:disabled, input[type=month]:disabled, input[type=time]:disabled {
+input[type=text]:disabled, input[type=password]:disabled, input[type=date]:disabled, input[type=month]:disabled, input[type=time]:disabled {
   border-radius: 2px;
   border: solid 1px #e2e5e9;
   background-color: #f8f7f7;
@@ -1097,5 +1097,11 @@ ul.list-tab li.list-tab-menu.on {
   background: url(../assets/bt_popup_close.svg);
   width: 12px;
   height: 12px;
+}
+
+.img-logo {
+  content: url(../assets/img_logo@3x.png);
+  width: 36px;
+  height: 36px;
 }
 /*# sourceMappingURL=common.css.map */

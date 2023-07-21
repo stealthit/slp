@@ -623,3 +623,91 @@
     }
   }
 }
+
+.login-wrapper {
+  background: #f4f5f5;
+  @include flex_center;
+  .login-wrap {
+    padding: 70px 0 20px 0;
+    width: 360px;
+    height: 460px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+    
+    .login-title-wrap {
+      @include flex_center;
+      flex-direction: column;
+      gap: 20px;
+
+      .login-title {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        font-size: 22px;        
+        text-align: center;
+        color: #172d5a;
+
+        span {
+          font-size: 12px;          
+          line-height: 1.08;                    
+        }
+      }      
+    }
+    .input-login-wrapper {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      .ic-id {
+        width: 240px;
+        background: url(../assets/ic_login_id.svg) no-repeat 5% center;
+        padding-left: 30px;        
+      }
+      .ic-pw {
+        width: 240px;
+        background: url(../assets/ic_login_pw.svg) no-repeat 5% center;
+        padding-left: 30px;        
+      }
+      .btn-login {
+        width: 240px;
+        height: 35px;        
+        padding: 8px 104px;
+        border-radius: 2px;
+        background-color: #172d5a;
+        font-size: 12px;
+        font-weight: bold;        
+        line-height: 1.58;        
+        text-align: center;
+        color: #fff;
+      }
+      .join-find{        
+        .v-line {
+          width: 1px;
+          height: 12px;  
+          background-color: #e2e5e9;
+        }
+        height: 17px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 11px;
+        font-weight: 500;  
+        color: #888;
+      }
+    }
+    .copyright {
+      white-space: nowrap;      
+      height: 12px;
+      margin: 74px 32px 0;
+      opacity: 0.7;
+      font-family: NotoSansCJKkr;
+      font-size: 8px;
+      font-weight: 500;      
+      line-height: 1.5;      
+      text-align: center;
+      color: #8591aa;
+    }
+  }
+}
