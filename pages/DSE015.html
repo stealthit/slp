@@ -136,13 +136,13 @@
               <div class="btn-tab-arrow right on"><img src="" alt=""></div>
             </div>
           </div>
+          <div class="location">    
+            <div class="nav-home"><img class="ic-navi-home">Home</div>
+            <img class="ic-navi-arrow">물류납품
+            <img class="ic-navi-arrow">발주
+            <img class="ic-navi-arrow">납입카드 출력
+          </div>
           <div class="tab-contents DSE009">
-            <div class="location">    
-              <div class="nav-home"><img class="ic-navi-home">Home</div>
-              <img class="ic-navi-arrow">물류납품
-              <img class="ic-navi-arrow">발주
-              <img class="ic-navi-arrow">납입카드 출력
-            </div>
             <div class="search-conditions con-box">              
               <div class="setting-grid">
                 <div class="setting-grid-title">인력구분</div>
@@ -204,27 +204,27 @@
                 <div class="btn-search btn-navy"><img>조회</div>
                 <div class="btn-clear btn-white"><img>초기화</div>
               </div>
-            </div>
-            <div class="edit-btn-wrapper">
-              <button class="btn-white"><img class="ic-bt-reset"> 초기화</button>
-              <button class="btn-white"><img class="ic-line-plus">행 추가</button>
-              <button class="btn-white"><img class="ic-line-minus">행 삭제</button>
-              <button class="btn-white"><img class="ic-edit">수정</button>
-              <button class="btn-white"><img class="ic-register">등록</button>
-              <button class="btn-navy"><img class="ic-bt-save">저장</button>
-            </div>
+            </div>            
             <div class="list-wrapper">
-              <div class="search-list con-box">
+              <div class="search-list">
                 <div class="list-top">
                   <div class="list-title ic-title-mark">인력 기본정보</div>                  
                 </div>
                 <!-- 개발 작업시 그리드 들어갈 부분 -->
-                <div class="list-grid-wrapper">
+                <div class="list-grid-wrapper con-box">
                   그리드 영역
                 </div>
                 <!---------------------------------->
               </div>
               <div class="search-info">
+                <div class="edit-btn-wrapper">
+                  <button class="btn-white"><img class="ic-bt-reset"> 초기화</button>
+                  <button class="btn-white"><img class="ic-line-plus">행 추가</button>
+                  <button class="btn-white"><img class="ic-line-minus">행 삭제</button>
+                  <button class="btn-white"><img class="ic-edit">수정</button>
+                  <button class="btn-white"><img class="ic-register">등록</button>
+                  <button class="btn-navy"><img class="ic-bt-save">저장</button>
+                </div>
                 <div class="info-detail1 con-box">
                   <!-- 개발 작업시 그리드 들어갈 부분 -->
                   <div class="list-grid-wrapper">
@@ -232,53 +232,55 @@
                   </div>
                 </div>
                 <div class="info-detail2">
-                  <div class="info-picture con-box">
+                  <div class="info-picture">
                     <div class="list-title ic-title-mark">인력 사진정보</div>
-                    <div class="img-picture"><img src="../assets/pic_sample.png" alt=""></div>
+                    <div class="img-picture con-box flex-1"><img src="../assets/pic_sample.png" alt=""></div>
                   </div>
-                  <div class="info-edit con-box">
+                  <div class="info-edit">
                     <div class="list-title ic-title-mark">인력 공유정보</div>
-                    <!-- 개발시 입력창 사이 간격은 gap-10,gap-15,gap-20 변경으로 조정  2023.7.18-->             
-                    <div class="setting-grid gap-10"> 
-                      <div class="setting-grid-title ic-title-nece">공유기간구분</div>
-                      <div class="setting-grid-content">  
-                        <div class="input-group text-edit">
-                          <select>
-                            <option value="" selected>월</option>
-                            <option value="">옵션1</option>
-                            <option value="">옵션2</option>
-                            <option value="">옵션3</option>
-                          </select>                  
-                        </div>                  
-                      </div>
-                      <div class="setting-grid-title ic-title-nece">공유기본기간</div>
-                      <div class="setting-grid-content">  
-                        <div class="input-wrapper text-edit">                    
-                          <input type="text" value="6"/> 
-                        </div>                
-                      </div>
-                      <div class="setting-grid-title ic-title-nece">공유금액기준</div>
-                      <div class="setting-grid-content">  
-                        <div class="input-group">
-                          <select disabled>
-                            <option value="" selected>주</option>
-                            <option value="">옵션1</option>
-                            <option value="">옵션2</option>
-                            <option value="">옵션3</option>
-                          </select>                  
-                        </div>                          
-                      </div>                      
-                      <div class="setting-grid-title ic-title-nece">공유금액</div>
-                      <div class="setting-grid-content">  
-                        <div class="input-wrapper text-edit">                    
-                          <input type="text" value="300,000"/> 
-                        </div>                
-                      </div>                      
-                      <div class="setting-grid-title ic-title-nece">공유게시기한</div>
-                      <div class="setting-grid-content">  
-                        <div class="input-wrapper text-edit">
-                          <input type="date" value="2021-02-10" />                         
-                        </div>                
+                    <div class="flex-col flex-1 con-box">
+                      <!-- 개발시 입력창 사이 간격은 gap-10,gap-15,gap-20 변경으로 조정  2023.7.18-->             
+                      <div class="setting-grid gap-10"> 
+                        <div class="setting-grid-title ic-title-nece">공유기간구분</div>
+                        <div class="setting-grid-content">  
+                          <div class="input-group text-edit">
+                            <select>
+                              <option value="" selected>월</option>
+                              <option value="">옵션1</option>
+                              <option value="">옵션2</option>
+                              <option value="">옵션3</option>
+                            </select>                  
+                          </div>                  
+                        </div>
+                        <div class="setting-grid-title ic-title-nece">공유기본기간</div>
+                        <div class="setting-grid-content">  
+                          <div class="input-wrapper text-edit">                    
+                            <input type="text" value="6"/> 
+                          </div>                
+                        </div>
+                        <div class="setting-grid-title ic-title-nece">공유금액기준</div>
+                        <div class="setting-grid-content">  
+                          <div class="input-group">
+                            <select disabled>
+                              <option value="" selected>주</option>
+                              <option value="">옵션1</option>
+                              <option value="">옵션2</option>
+                              <option value="">옵션3</option>
+                            </select>                  
+                          </div>                          
+                        </div>                      
+                        <div class="setting-grid-title ic-title-nece">공유금액</div>
+                        <div class="setting-grid-content">  
+                          <div class="input-wrapper text-edit">                    
+                            <input type="text" value="300,000"/> 
+                          </div>                
+                        </div>                      
+                        <div class="setting-grid-title ic-title-nece">공유게시기한</div>
+                        <div class="setting-grid-content">  
+                          <div class="input-wrapper text-edit">
+                            <input type="date" value="2021-02-10" />                         
+                          </div>                
+                        </div>
                       </div>
                     </div>
                   </div>

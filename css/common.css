@@ -188,7 +188,7 @@ select option, select.select-box option {
   background-position-y: center;
   vertical-align: middle;
   cursor: pointer;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.54;
   color: #152c5b;
 }
@@ -298,7 +298,7 @@ select option, select.select-box option {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   color: #152c5b;
 }
@@ -357,6 +357,7 @@ select option, select.select-box option {
   -webkit-box-shadow: 0 3px 15px 0 rgba(42, 97, 255, 0.1);
           box-shadow: 0 3px 15px 0 rgba(42, 97, 255, 0.1);
   background-color: #fff;
+  border: solid 1px #c3cbd8;
 }
 
 .edit-btn-wrapper {
@@ -370,8 +371,7 @@ select option, select.select-box option {
       -ms-flex-align: center;
           align-items: center;
   gap: 8px;
-  padding-right: 10px;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: bold;
   color: #5c7099;
 }
@@ -419,6 +419,10 @@ select option, select.select-box option {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
+}
+
+.gap-6 {
+  gap: 6px !important;
 }
 
 .gap-10 {
@@ -542,6 +546,7 @@ select option, select.select-box option {
 
 .setting-grid .setting-grid-content .input-wrapper.text-edit input {
   background: #fff7e4;
+  width: 100%;
 }
 
 .setting-grid .span-3 {
@@ -701,6 +706,12 @@ select option, select.select-box option {
   color: #172d5a;
 }
 
+.pic-wrapper {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
 .btn-navy {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -777,6 +788,7 @@ select option, select.select-box option {
 }
 
 .list-title {
+  height: 22px;
   font-size: 14px;
   font-weight: bold;
   line-height: 2;
@@ -1005,7 +1017,7 @@ ul.list-tab li.list-tab-menu.on {
   content: url(../assets/ic_bookmark_off@3x.png);
   width: 18px;
   height: 18px;
-  margin-right: 4px;
+  margin-right: 2px;
 }
 
 .ic-bookmark.on {

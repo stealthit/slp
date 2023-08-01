@@ -9,9 +9,9 @@ $(".btn-sidebar").on("click", function(){
   }
   else {
     $(this).addClass("show")
-    $(this).animate({left: '163px'});
+    $(this).animate({left: '183px'});
     sideWrap.addClass("show");
-    sideWrap.animate({width: '180px'});
+    sideWrap.animate({width: '200px'});
   }
 })
 //--------------------------------------------
@@ -50,6 +50,7 @@ $(".btn-sidebar").on("click", function(){
     setTabArrowBtn(curLeft);
   })  
   
+  $(".ic-bookmark").click(function(){$(this).toggleClass("on");})
   function setTabArrowBtn(curLeft){
     var leftBtn = $(".btn-tab-arrow.left");
     var rightBtn = $(".btn-tab-arrow.right");        
@@ -64,25 +65,34 @@ $(".btn-sidebar").on("click", function(){
     else rightBtn.addClass("on");
   }
 //end tab--------------------------------------------------------
+// menu event ---------------------------------------------------
+$(".main-menu li").on("click", function(){
+  $(this).addClass("active").siblings().removeClass("active");
+})
+$("ul.details-submenu li").on("click", function(){
+  $("ul.details-submenu li").removeClass("active");
+  $(this).addClass("active");
+})
+//end menu event ------------------------------------------------
 // list-tab  
   $("ul.list-tab li").click(function () {
-    const tabId = $(this).attr("data-tab");
+    // const tabId = $(this).attr("data-tab");
 
-    $("ul.list-tab li").removeClass("on");
-    $(".list-tab-content").removeClass("active");
+    // $("ul.list-tab li").removeClass("on");
+    // $(".list-tab-content").removeClass("active");
 
-    $(this).addClass("on");
-    $("#" + tabId).addClass("active");
+    // $(this).addClass("on");
+    // $("#" + tabId).addClass("active");
   });
 // search detail button ---------------------------------------
 $(".btn-search-detail").on("click", function(){
   if ($(this).hasClass("open")) {
     $(this).removeClass("open");
-    $(".search-conditions").animate({height: '82px'});
+    $(".search-conditions").animate({height: '84px'});
   }
   else {
     $(this).addClass("open");
-    var elHeight = document.querySelector(".setting-grid").scrollHeight + 20;
+    var elHeight = document.querySelector(".setting-grid").scrollHeight + 22;
     $(".search-conditions").animate({height: elHeight});
   }
 })

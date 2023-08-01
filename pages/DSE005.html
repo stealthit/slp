@@ -136,13 +136,13 @@
               <div class="btn-tab-arrow right on"><img src="" alt=""></div>
             </div>
           </div>
+          <div class="location">    
+            <div class="nav-home"><img class="ic-navi-home">Home</div>
+            <img class="ic-navi-arrow">물류납품
+            <img class="ic-navi-arrow">발주
+            <img class="ic-navi-arrow">납입카드 출력
+          </div>
           <div class="tab-contents DSE001">
-            <div class="location">    
-              <div class="nav-home"><img class="ic-navi-home">Home</div>
-              <img class="ic-navi-arrow">물류납품
-              <img class="ic-navi-arrow">발주
-              <img class="ic-navi-arrow">납입카드 출력
-            </div>
             <div class="search-conditions con-box">              
               <div class="setting-grid">
                 <div class="setting-grid-title">기자재구분</div>
@@ -200,152 +200,154 @@
                 <div class="btn-search btn-navy"><img>조회</div>
                 <div class="btn-clear btn-white"><img>초기화</div>
               </div>
-            </div>
-            <div class="edit-btn-wrapper">
-              <button class="btn-white"><img class="ic-bt-reset"> 초기화</button>
-              <button class="btn-white"><img class="ic-line-plus">행 추가</button>
-              <button class="btn-white"><img class="ic-line-minus">행 삭제</button>
-              <button class="btn-white"><img class="ic-edit">수정</button>
-              <button class="btn-white"><img class="ic-register">등록</button>
-              <button class="btn-navy"><img class="ic-bt-save">저장</button>
-            </div>
+            </div>            
             <div class="list-wrapper">
-              <div class="search-list con-box">
+              <div class="search-list">
                 <div class="list-top">
                   <div class="list-title ic-title-mark">기자재 기본정보</div>                  
                 </div>
                 <!-- 개발 작업시 그리드 들어갈 부분 -->
-                <div class="list-grid-wrapper">
+                <div class="list-grid-wrapper con-box">
                   그리드 영역
                 </div>
                 <!---------------------------------->
               </div>
-              <div class="search-edit con-box">                
-                <!-- 개발시 입력창 사이 간격은 gap-10,gap-15,gap-20 변경으로 조정  2023.7.18-->             
-                <div class="setting-grid gap-10"> 
-                  <div class="setting-grid-title ic-title-nece">기자재구분</div>
-                  <div class="setting-grid-content">  
-                    <div class="input-wrapper text-edit">                    
-                      <input type="text" value="지게차"/> 
-                    </div>                
-                  </div>                  
-                  <div class="setting-grid-title ic-title-nece">기자재업체</div>
-                  <div class="setting-grid-content">  
-                    <div class="input-wrapper text-edit">                    
-                      <input type="text" value="(주)대주"/> 
-                    </div>                
-                  </div>
-                  <div class="setting-grid-title ic-title-nece">사업자등록번호</div>
-                  <div class="setting-grid-content">  
-                    <div class="input-wrapper text-edit">                    
-                      <input type="text" value="123456789"/> 
-                    </div>                
-                  </div>
-                  <div class="setting-grid-title ic-title-nece">기자재ID</div>
-                  <div class="setting-grid-content">  
-                    <div class="input-wrapper">                    
-                      <input type="text" value="2023000001" disabled/> 
-                    </div>                
-                  </div>
-                  <div class="setting-grid-title ic-title-nece">기자재명</div>
-                  <div class="setting-grid-content span-3">  
-                    <div class="input-wrapper">                    
-                      <input type="text" value="CLARK CRX25" disabled/> 
-                    </div>                
-                  </div>
-                  <div class="setting-grid-title ic-title-nece">차량형식</div>
-                  <div class="setting-grid-content">     
-                    <div class="input-group text-edit">
-                      <select>                        
-                        <option value="" selected>전동 입식</option>
-                        <option value="">옵션1</option>
-                        <option value="">옵션2</option>
-                        <option value="">옵션3</option>
-                      </select>                  
-                    </div>                  
-                  </div>
-                  <div class="setting-grid-title ic-title-nece">총 중량(톤)</div>
-                  <div class="setting-grid-content">     
-                    <div class="input-group text-edit">
-                      <select>
-                        <option value="" selected>1.5톤</option>
-                        <option value="">옵션1</option>
-                        <option value="">옵션2</option>
-                        <option value="">옵션3</option>
-                      </select>                  
-                    </div>                  
-                  </div>
-                  <div class="setting-grid-title ic-title-nece">마스트(단)</div>
-                  <div class="setting-grid-content">     
-                    <div class="input-group text-edit">
-                      <select>
-                        <option value="">1단</option>                        
-                        <option value="">2단</option>                        
-                        <option value="" selected>3단</option>
-                      </select>                  
-                    </div>                  
-                  </div>
-                  <div class="setting-grid-title ic-title-nece">최대올림 높이(mm)</div>
-                  <div class="setting-grid-content">  
-                    <div class="input-wrapper">                    
-                      <input type="text" value="6000"/> 
-                    </div>                
-                  </div>
-                  <div class="setting-grid-title ic-title-nece">제조년도</div>
-                  <div class="setting-grid-content">  
-                    <div class="input-wrapper text-edit">
-                      <input type="text" value="2021" />                         
-                    </div>                
-                  </div> 
-                  <div class="setting-grid-title ic-title-nece">제조사</div>
-                  <div class="setting-grid-content">  
-                    <div class="input-wrapper">                    
-                      <input type="text" value="CLARK"/> 
-                    </div>                
-                  </div>
-                  <div class="setting-grid-title ic-title-nece">모델명</div>
-                  <div class="setting-grid-content">  
-                    <div class="input-wrapper text-edit">                    
-                      <input type="text" value="CRX25"/> 
-                    </div>                
-                  </div>
-                  <div class="setting-grid-title ic-title-nece">시리얼번호</div>
-                  <div class="setting-grid-content">  
-                    <div class="input-wrapper text-edit">                    
-                      <input type="text" value="CRX205-2021-9659KF"/> 
-                    </div>                
-                  </div>
-                  <div class="setting-grid-title ic-title-nece">충전기포함여부</div>
-                  <div class="setting-grid-content">     
-                    <div class="input-group">
-                      <select>
-                        <option value="" selected>포함</option>
-                        <option value="">옵션1</option>                        
-                        <option value="">옵션2</option>                        
-                      </select>                  
-                    </div>                  
-                  </div>
-                  <div class="setting-grid-title ic-title-nece">기사포함여부</div>
-                  <div class="setting-grid-content">     
-                    <div class="input-group">
-                      <select>
-                        <option value="" selected>미포함</option>
-                        <option value="">옵션1</option>                        
-                        <option value="">옵션2</option>                        
-                      </select>                  
-                    </div>                  
-                  </div>
-                  <div class="setting-grid-title ic-title-nece">사용여부</div>
-                  <div class="setting-grid-content">     
-                    <div class="input-group">
-                      <select>
-                        <option value="" selected>사용</option>
-                        <option value="">옵션1</option>                        
-                        <option value="">옵션2</option>                        
-                      </select>                  
-                    </div>                  
-                  </div>
+              <div class="search-edit">   
+                <div class="edit-btn-wrapper">
+                  <button class="btn-white"><img class="ic-bt-reset"> 초기화</button>
+                  <button class="btn-white"><img class="ic-line-plus">행 추가</button>
+                  <button class="btn-white"><img class="ic-line-minus">행 삭제</button>
+                  <button class="btn-white"><img class="ic-edit">수정</button>
+                  <button class="btn-white"><img class="ic-register">등록</button>
+                  <button class="btn-navy"><img class="ic-bt-save">저장</button>
                 </div>
+                <div class="flex-col flex-1 con-box">
+                  <!-- 개발시 입력창 사이 간격은 gap-10,gap-15,gap-20 변경으로 조정  2023.7.18-->             
+                  <div class="setting-grid gap-10"> 
+                    <div class="setting-grid-title ic-title-nece">기자재구분</div>
+                    <div class="setting-grid-content">  
+                      <div class="input-wrapper text-edit">                    
+                        <input type="text" value="지게차"/> 
+                      </div>                
+                    </div>                  
+                    <div class="setting-grid-title ic-title-nece">기자재업체</div>
+                    <div class="setting-grid-content">  
+                      <div class="input-wrapper text-edit">                    
+                        <input type="text" value="(주)대주"/> 
+                      </div>                
+                    </div>
+                    <div class="setting-grid-title ic-title-nece">사업자등록번호</div>
+                    <div class="setting-grid-content">  
+                      <div class="input-wrapper text-edit">                    
+                        <input type="text" value="123456789"/> 
+                      </div>                
+                    </div>
+                    <div class="setting-grid-title ic-title-nece">기자재ID</div>
+                    <div class="setting-grid-content">  
+                      <div class="input-wrapper">                    
+                        <input type="text" value="2023000001" disabled/> 
+                      </div>                
+                    </div>
+                    <div class="setting-grid-title ic-title-nece">기자재명</div>
+                    <div class="setting-grid-content span-3">  
+                      <div class="input-wrapper">                    
+                        <input type="text" value="CLARK CRX25" disabled/> 
+                      </div>                
+                    </div>
+                    <div class="setting-grid-title ic-title-nece">차량형식</div>
+                    <div class="setting-grid-content">     
+                      <div class="input-group text-edit">
+                        <select>                        
+                          <option value="" selected>전동 입식</option>
+                          <option value="">옵션1</option>
+                          <option value="">옵션2</option>
+                          <option value="">옵션3</option>
+                        </select>                  
+                      </div>                  
+                    </div>
+                    <div class="setting-grid-title ic-title-nece">총 중량(톤)</div>
+                    <div class="setting-grid-content">     
+                      <div class="input-group text-edit">
+                        <select>
+                          <option value="" selected>1.5톤</option>
+                          <option value="">옵션1</option>
+                          <option value="">옵션2</option>
+                          <option value="">옵션3</option>
+                        </select>                  
+                      </div>                  
+                    </div>
+                    <div class="setting-grid-title ic-title-nece">마스트(단)</div>
+                    <div class="setting-grid-content">     
+                      <div class="input-group text-edit">
+                        <select>
+                          <option value="">1단</option>                        
+                          <option value="">2단</option>                        
+                          <option value="" selected>3단</option>
+                        </select>                  
+                      </div>                  
+                    </div>
+                    <div class="setting-grid-title ic-title-nece">최대올림 높이(mm)</div>
+                    <div class="setting-grid-content">  
+                      <div class="input-wrapper">                    
+                        <input type="text" value="6000"/> 
+                      </div>                
+                    </div>
+                    <div class="setting-grid-title ic-title-nece">제조년도</div>
+                    <div class="setting-grid-content">  
+                      <div class="input-wrapper text-edit">
+                        <input type="text" value="2021" />                         
+                      </div>                
+                    </div> 
+                    <div class="setting-grid-title ic-title-nece">제조사</div>
+                    <div class="setting-grid-content">  
+                      <div class="input-wrapper">                    
+                        <input type="text" value="CLARK"/> 
+                      </div>                
+                    </div>
+                    <div class="setting-grid-title ic-title-nece">모델명</div>
+                    <div class="setting-grid-content">  
+                      <div class="input-wrapper text-edit">                    
+                        <input type="text" value="CRX25"/> 
+                      </div>                
+                    </div>
+                    <div class="setting-grid-title ic-title-nece">시리얼번호</div>
+                    <div class="setting-grid-content">  
+                      <div class="input-wrapper text-edit">                    
+                        <input type="text" value="CRX205-2021-9659KF"/> 
+                      </div>                
+                    </div>
+                    <div class="setting-grid-title ic-title-nece">충전기포함여부</div>
+                    <div class="setting-grid-content">     
+                      <div class="input-group">
+                        <select>
+                          <option value="" selected>포함</option>
+                          <option value="">옵션1</option>                        
+                          <option value="">옵션2</option>                        
+                        </select>                  
+                      </div>                  
+                    </div>
+                    <div class="setting-grid-title ic-title-nece">기사포함여부</div>
+                    <div class="setting-grid-content">     
+                      <div class="input-group">
+                        <select>
+                          <option value="" selected>미포함</option>
+                          <option value="">옵션1</option>                        
+                          <option value="">옵션2</option>                        
+                        </select>                  
+                      </div>                  
+                    </div>
+                    <div class="setting-grid-title ic-title-nece">사용여부</div>
+                    <div class="setting-grid-content">     
+                      <div class="input-group">
+                        <select>
+                          <option value="" selected>사용</option>
+                          <option value="">옵션1</option>                        
+                          <option value="">옵션2</option>                        
+                        </select>                  
+                      </div>                  
+                    </div>
+                  </div>
+                </div>             
               </div>
             </div>
           </div>          

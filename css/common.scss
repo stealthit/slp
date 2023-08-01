@@ -164,7 +164,7 @@ select, select.select-box {
      vertical-align:middle; 
      cursor:pointer;
      &:not(:nth-child(2)) {margin-left: 20px;}
-     font-size: 13px;     
+     font-size: 12px;     
      line-height: 1.54;          
      color: #152c5b;
   }
@@ -265,7 +265,7 @@ select, select.select-box {
   flex-wrap: wrap;
   gap: 10px;
   align-items: center;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;  
   color: #152c5b;
 
@@ -300,14 +300,15 @@ select, select.select-box {
   border-radius: 4px;
   box-shadow: 0 3px 15px 0 rgba(42, 97, 255, 0.1);
   background-color: #fff;
+  border: solid 1px #c3cbd8;
 }
 .edit-btn-wrapper {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 8px;
-  padding-right: 10px;
-  font-size: 12px;
+  // padding-right: 10px;
+  font-size: 11px;
   font-weight: bold;
   color: #5c7099;
   button {
@@ -321,6 +322,7 @@ select, select.select-box {
 .flex-between {justify-content: space-between;}
 .flex-row {display: flex;gap: 10px;}
 .flex-col {display: flex;flex-direction: column;gap: 10px;}
+.gap-6 {gap: 6px !important;}
 .gap-10 {gap: 10px !important;}
 .gap-15 {gap: 15px !important;}
 .gap-20 {gap: 20px !important;}
@@ -392,6 +394,7 @@ select, select.select-box {
 
       &.text-edit input{
         background: #fff7e4;
+        width: 100%;
       }
     }
   }
@@ -498,6 +501,9 @@ select, select.select-box {
     }
   }
 }
+.pic-wrapper {
+  flex: 1;
+}
 .btn-navy {
   @include flex_center;
   border-radius: 2px;
@@ -548,6 +554,7 @@ select, select.select-box {
   }
 }
 .list-title {
+  height: 22px;
   font-size: 14px;
   font-weight: bold;                
   line-height: 2;                
@@ -659,7 +666,7 @@ ul.list-tab {
   content: url(../assets/ic_bookmark_off@3x.png);
   width: 18px;
   height: 18px;
-  margin-right: 4px;
+  margin-right: 2px;
   &.on {
     content: url(../assets/ic_bookmark_on@3x.png);
   }
