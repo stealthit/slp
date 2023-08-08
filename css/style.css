@@ -161,6 +161,7 @@
 }
 
 .wrapper .main-wrapper .sidebar-container {
+  position: relative;
   white-space: nowrap;
   overflow: hidden;
   border-right: 1px solid #c3cbd8;
@@ -171,7 +172,7 @@
   padding: 10px 0;
   overflow-x: overlay;
   scroll-behavior: smooth;
-  height: calc(100vh - 68px);
+  height: calc(100% - 28px);
   overflow: overlay;
 }
 
@@ -702,7 +703,7 @@
   padding-right: 0;
 }
 
-.DSE002 .setting-grid-content {
+.DSE002 .search-edit .setting-grid-content {
   max-width: initial;
 }
 
@@ -798,6 +799,24 @@
 
 .DSE010 .list-top {
   padding-right: 10px;
+}
+
+.OPE001 .list-wrapper {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  background: #f4f5f5;
+}
+
+.OPE001 .list-wrapper .search-list {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .common13 .alarm-action {
@@ -1062,6 +1081,86 @@
           flex: 1;
   -ms-grid-columns: 90px 1fr;
       grid-template-columns: 90px 1fr;
+}
+
+.popup-ope001 {
+  width: 590px;
+  height: 444px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  border: solid 1px #f8f7f7;
+  background-color: #f4f5f5;
+}
+
+.popup-ope001 .modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+
+.popup-ope001 .modal-body .search-list {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.popup-ope001 .modal-body .search-list .list-top .list-title span {
+  font-size: 13px;
+  font-weight: 500;
+  color: #8591aa;
+  margin-left: 8px;
+}
+
+.popup-ope001 .modal-body .sel-comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: center;
+  color: #8591aa;
+}
+
+.popup-ope001 .modal-body .sel-comment.on {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.popup-ope001 .modal-body .sel-comment .sel-arrow {
+  width: 48px;
+  height: 48px;
+  background-color: #dfe5e5;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popup-ope001 .modal-body .userG-list {
+  display: none;
+}
+
+.popup-ope001 .modal-body .userG-list.on {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .login-wrapper {

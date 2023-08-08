@@ -91,7 +91,8 @@
       z-index: 3;
             
     }   
-    .sidebar-container{    
+    .sidebar-container{   
+      position: relative; 
       white-space: nowrap;   
       overflow: hidden;    
       border-right: 1px solid #c3cbd8;    
@@ -102,7 +103,7 @@
       .sidebar-menu-wrapper {        
         padding: 10px 0;      
         @include scrollbar('V');
-        height: calc(100vh - 68px);
+        height: calc(100% - 28px);
         overflow: overlay;
 
         details summary {
@@ -434,7 +435,7 @@
   .list-top .edit-btn-wrapper {padding-right: 0;}
 }
 .DSE002 {  
-  .setting-grid-content {max-width: initial;}
+  .search-edit .setting-grid-content {max-width: initial;}
 }
 
 .DSE009 {
@@ -486,6 +487,18 @@
     font-weight: bold;    
   }
   .list-top {padding-right: 10px;}
+}
+
+.OPE001 {
+  .list-wrapper {
+    position: relative;
+    flex: 1;
+    display: flex;    
+    gap: 10px;
+    background: #f4f5f5;
+
+    .search-list {flex: 1;}
+  }
 }
 
 .common13 {
@@ -650,6 +663,51 @@
     .setting-grid {
       flex: 1;
       grid-template-columns: 90px 1fr;
+    }
+  }
+}
+
+.popup-ope001 {
+  width: 590px;
+  height: 444px;  
+  border-radius: 4px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+  border: solid 1px #f8f7f7;
+  background-color: #f4f5f5;
+
+  .modal-body {
+    display: flex;
+    gap: 10px;
+    .search-list {
+      flex: 1;
+
+      .list-top .list-title span{
+        font-size: 13px;
+        font-weight: 500;  
+        color: #8591aa;
+        margin-left: 8px;
+      }
+    }
+    .sel-comment {
+      @include flex_center;   
+      display: none;
+      &.on {display: flex;}
+      gap: 10px;
+      font-size: 13px;
+      font-weight: 500;  
+      text-align: center;
+      color: #8591aa;
+      .sel-arrow {
+        width: 48px;
+        height: 48px;
+        background-color: #dfe5e5;
+        border-radius: 50%;
+        @include flex_center;
+      }   
+    }
+    .userG-list {
+      display: none;
+      &.on {display: flex;}
     }
   }
 }
