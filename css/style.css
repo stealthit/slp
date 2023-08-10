@@ -1486,7 +1486,6 @@
 .login-wrapper .login-wrap .input-login-wrapper .btn-login {
   width: 240px;
   height: 35px;
-  padding: 8px 104px;
   border-radius: 2px;
   background-color: #172d5a;
   font-size: 12px;
@@ -1521,9 +1520,8 @@
 }
 
 .login-wrapper .login-wrap .inquiry-number {
-  width: 136px;
   height: 18px;
-  margin: 50px 52px 6px;
+  margin-top: 50px;
   font-size: 12px;
   font-weight: 500;
   text-align: center;
@@ -1533,7 +1531,6 @@
 .login-wrapper .login-wrap .copyright {
   white-space: nowrap;
   height: 12px;
-  margin: 74px 32px 0;
   opacity: 0.7;
   font-family: NotoSansCJKkr;
   font-size: 8px;
