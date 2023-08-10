@@ -259,15 +259,7 @@
       $("#modal-background").fadeIn(300);
       $(".popup-ope001").css("display", "flex").hide().fadeIn();
       $("body").css("overflow", "hidden");
-    });
-    
-    $("#modal-background, .close").on('click',function(){      
-      if ($(this).hasClass("close")){
-        $("#modal-background").fadeOut(300);
-        $(".modal-con").fadeOut(300);  
-        $('body').css('overflow', 'overlay');
-      }
-    });
+    });       
 
     $(".btn-imsi").on("click",function(){
       $(".sel-comment").removeClass("on");

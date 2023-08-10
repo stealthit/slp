@@ -399,7 +399,7 @@ select, select.select-box {
     }
   }
   .span-3 {grid-column: span 3; width: calc(100% - ((100% - 650px) / 2));}  
-
+  .span-2 {grid-column: span 2;}
   &.grid-check-line {
     grid-template-columns: 110px 1fr;
     grid-template-rows: auto;
@@ -677,7 +677,13 @@ ul.list-tab {
 @include menu_images(ic_left_1_2);
 @include menu_images(ic_left_1_3);
 @include menu_images(ic_left_1_4);
-
+.c-red {color: #e80000;}
+.c-gray {color: #707070;}
+.underline {
+  cursor: pointer;
+  height: 17px;
+  border-bottom: 1px solid #152c5b;
+}
 .ic-bookmark {  
   content: url(../assets/ic_bookmark_off@3x.png);
   width: 18px;
@@ -769,7 +775,7 @@ ul.list-tab {
   height: 12px;  
 }
 .img-logo {
-  content: url(../assets/img_logo@3x.png);
+  content: url(../assets/img_login_logo@3x.png);
   width: 36px;
   height: 36px;  
 }

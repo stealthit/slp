@@ -554,6 +554,10 @@ select option, select.select-box option {
   width: calc(100% - ((100% - 650px) / 2));
 }
 
+.setting-grid .span-2 {
+  grid-column: span 2;
+}
+
 .setting-grid.grid-check-line {
   -ms-grid-columns: 110px 1fr;
       grid-template-columns: 110px 1fr;
@@ -1041,6 +1045,20 @@ ul.list-tab li.list-tab-menu.on {
   content: url(../assets/ic_left_1_4_s@3x.png);
 }
 
+.c-red {
+  color: #e80000;
+}
+
+.c-gray {
+  color: #707070;
+}
+
+.underline {
+  cursor: pointer;
+  height: 17px;
+  border-bottom: 1px solid #152c5b;
+}
+
 .ic-bookmark {
   content: url(../assets/ic_bookmark_off@3x.png);
   width: 18px;
@@ -1146,7 +1164,7 @@ ul.list-tab li.list-tab-menu.on {
 }
 
 .img-logo {
-  content: url(../assets/img_logo@3x.png);
+  content: url(../assets/img_login_logo@3x.png);
   width: 36px;
   height: 36px;
 }

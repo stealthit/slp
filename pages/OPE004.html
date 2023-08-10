@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <div class="header-logo">
+        <img src="../assets/img_logo@3x.png" alt="" width="19" height="19">
+        스마트물류플랫폼
+      </div>
+    </div>
+    <div class="info-body OPE004">
+      <div class="info-box">      
+        <div class="box-title ic-title-mark">회원 정보</div>      
+        <div class="setting-grid gap-10 con-box"> 
+          <div class="setting-grid-title ic-title-nece">아이디</div>
+          <div class="setting-grid-content">  
+            <div class="input-wrapper">                    
+              <input type="text" value="" placeholder="영문,숫자 5-16자리"/> 
+              <div class="edit-btn-wrapper"><button class="btn-white">중복확인</button></div>              
+            </div>  
+          </div>
+          <div class="setting-grid-title ic-title-nece">비밀번호</div>
+          <div class="setting-grid-content">  
+            <div class="input-wrapper">                    
+              <input type="text" value="" placeholder="영문,숫자,특수문자 포함 8-20자리"/> 
+            </div>            
+          </div>
+          <div class="setting-grid-title ic-title-nece">비밀번호 확인</div>
+          <div class="setting-grid-content">  
+            <div class="input-wrapper">                    
+              <input type="text" value="" /> 
+            </div>            
+          </div>
+          <div class="setting-grid-title ic-title-nece">이름</div>
+          <div class="setting-grid-content">  
+            <div class="input-wrapper">                    
+              <input type="text" value="" /> 
+            </div>            
+          </div>
+          <div class="setting-grid-title ic-title-nece">연락처</div>
+          <div class="setting-grid-content">  
+            <div class="input-wrapper">                    
+              <input type="text" value="" /> 
+            </div>            
+          </div>
+          <div class="setting-grid-title">이메일</div>
+          <div class="setting-grid-content">  
+            <div class="input-wrapper">                    
+              <input type="text" value="" /> 
+            </div>            
+          </div>          
+          <div class="sms-email-check span-2">  
+            <div class="check-box">SMS 수신<input type="checkbox" name="" id=""></div>              
+            <div class="check-box">이메일 수신<input type="checkbox" name="" id=""></div>                          
+          </div>
+        </div>
+      </div>    
+      <div class="info-box">      
+        <div class="box-title ic-title-mark">부가 정보</div>      
+        <div class="setting-grid gap-10 con-box"> 
+          <div class="setting-grid-title">회사명</div>
+          <div class="setting-grid-content">  
+            <div class="input-wrapper">                    
+              <input type="text" value=""/> 
+            </div>            
+          </div>
+          <div class="setting-grid-title">부서명</div>
+          <div class="setting-grid-content">  
+            <div class="input-wrapper">                    
+              <input type="text" value=""/> 
+            </div>            
+          </div>
+          <div class="setting-grid-title">사업자번호</div>
+          <div class="setting-grid-content">  
+            <div class="input-wrapper">                    
+              <input type="text" value=""/> 
+            </div>            
+          </div>
+          <div class="setting-grid-title">업종</div>
+          <div class="setting-grid-content">  
+            <div class="input-wrapper">                    
+              <input type="text" value=""/> 
+            </div>            
+          </div>
+          <div class="setting-grid-title">업태</div>
+          <div class="setting-grid-content">  
+            <div class="input-wrapper">                    
+              <input type="text" value=""/> 
+            </div>            
+          </div>
+        </div>
+      </div>
+      <div class="info-box">      
+        <div class="box-title ic-title-mark">약관 동의</div>      
+        <div class="agree-box con-box">
+          <div class="check-box">
+            <input type="checkbox" name="" id="">전체 약관에 동의합니다.
+          </div>
+          <div class="check-box">
+            <input type="checkbox" name="" id=""><div class="btn-terms underline"><span class="c-red">[필수]</span> 서비스 이용약관 동의</div>
+          </div>
+          <div class="check-box">
+            <input type="checkbox" name="" id=""><div class="btn-terms underline"><span class="c-red">[필수]</span> 개인정보 처리방침 동의</div>
+          </div>
+          <div class="check-box">
+            <input type="checkbox" name="" id=""><div class="btn-terms underline"><span class="c-gray">[선택]</span> 위치정보 수집 동의</div>
+          </div>
+        </div>
+      </div>
+      <div class="edit-btn-wrapper">
+        <button class="btn-navy">회원가입</button>
+        <button class="btn-white">취소</button>
+      </div>
+    </div>
+    <div class="footer">Copyright © 스마트물류플랫폼 All right reserved.</div>
+  </div>
+
+  <div id="modal-background"></div>
+  <div class="popup-terms modal-con">
+    <div class="modal-top">
+      <div class="box-title">서비스 이용약관 동의</div>
+      <button type="button" onclick="closePopup()" class="close bt-popup-close"></button>
+    </div>  
+    <div class="modal-body">   
+      <div class="terms-box">
+        <div class="terms-title">제 1 장 총 칙</div>
+        <div class="terms-sub-box">
+          <div class="terms-sub-title">제 1 조 (목적)</div>
+          <div class="terms-sub-txt">이 약관은 {COMPANY_NAME}(이하 &quot;사이트&quot;라 합니다)에서 제공하는 인터넷서비스(이하 &quot;서비스&quot;라 합니다)의 이용 조건 및 절차에 관한 기본적인 사항을 규정함을 목적으로 합니다.</div>
+        </div>        
+        <div class="terms-sub-box">
+          <div class="terms-sub-title">제 2 조 (약관의 효력 및 변경)</div>
+          <div class="terms-sub-txt">① 이 약관은 서비스 화면이나 기타의 방법으로 이용고객에게 공지함으로써 효력을 발생합니다.</div>
+          <div class="terms-sub-txt">② 사이트는 이 약관의 내용을 변경할 수 있으며, 변경된 약관은 제1항과 같은 방법으로 공지 또는 통지함으로써 효력을 발생합니다.</div>
+        </div>
+        <div class="terms-sub-box">
+          <div class="terms-sub-title">제 3 조 (용어의 정의)</div>
+          <div class="terms-sub-txt">이 약관에서 사용하는 용어의 정의는 다음과 같습니다.</div>
+          <div class="terms-sub-txt">① 회원 : 사이트와 서비스 이용계약을 체결하거나 이용자 아이디(ID)를 부여받은 개인 또는 단체를 말합니다.</div>
+          <div class="terms-sub-txt">② 신청자 : 회원가입을 신청하는 개인 또는 단체를 말합니다.</div>
+          <div class="terms-sub-txt">③ 아이디(ID) : 회원의 식별과 서비스 이용을 위하여 회원이 정하고 사이트가 승인하는 문자와 숫자의 조합을 말합니다.</div>
+          <div class="terms-sub-txt">④ 비밀번호 : 회원이 부여 받은 아이디(ID)와 일치된 회원임을 확인하고, 회원 자신의 비밀을 보호하기 위하여 회원이 정한 문자와 숫자의 조합을 말합니다.</div>
+          <div class="terms-sub-txt">⑤ 해지 : 사이트 또는 회원이 서비스 이용계약을 취소하는 것을 말합니다.</div>
+        </div>
+      </div> 
+      <div class="terms-box">
+        <div class="terms-title">제 2 장 서비스 이용계약</div>
+        <div class="terms-sub-box">
+          <div class="terms-sub-title">제 4 조 (이용계약의 성립)</div>
+          <div class="terms-sub-txt">① 이용약관 하단의 동의 버튼을 누르면 이 약관에 동의하는 것으로 간주됩니다.</div>
+          <div class="terms-sub-txt">② 이용계약은 서비스 이용희망자의 이용약관 동의 후 이용 신청에 대하여 사이트가 승낙함으로써 성립합니다.</div>
+        </div>        
+        <div class="terms-sub-box">
+          <div class="terms-sub-title">제 5 조 (이용신청)</div>
+          <div class="terms-sub-txt">① 신청자가 본 서비스를 이용하기 위해서는 사이트 소정의 가입신청 양식에서 요구하는 이용자 정보를 기록하여 제출해야 합니다.</div>
+          <div class="terms-sub-txt">② 가입신청 양식에 기재하는 모든 이용자 정보는 모두 실제 데이터인 것으로 간주됩니다. 실명이나 실제 정보를 입력하지 않은 사용자는 법적인 보호를 받을 수 없으며, 서비스의 제한을 받을 수 있습니다.</div>
+        </div> 
+        <div class="terms-sub-box">
+          <div class="terms-sub-title">제 6 조 (이용신청의 승낙)</div>
+          <div class="terms-sub-txt">① 사이트는 신청자에 대하여 제2항, 제3항의 경우를 예외로 하여 서비스 이용신청을 승낙합니다.</div>
+          <div class="terms-sub-txt">② 사이트는 다음에 해당하는 경우에 그 신청에 대한 승낙 제한사유가 해소될 때까지 승낙을 유보할 수 있습니다.</div>
+          <div class="terms-sub-txt">가. 서비스 관련 설비에 여유가 없는 경우</div>
+          <div class="terms-sub-txt">나. 기술상 지장이 있는 경우</div>
+          <div class="terms-sub-txt">다. 기타 사이트가 필요하다고 인정되는 경우</div>
+          <div class="terms-sub-txt">③ 사이트는 신청자가 다음에 해당하는 경우에는 승낙을 거부할 수 있습니다.</div>
+          <div class="terms-sub-txt">가. 다른 개인(사이트)의 명의를 사용하여 신청한 경우</div>
+          <div class="terms-sub-txt">나. 이용자 정보를 허위로 기재하여 신청한 경우</div>
+          <div class="terms-sub-txt">다. 사회의 안녕질서 또는 미풍양속을 저해할 목적으로 신청한 경우</div>
+          <div class="terms-sub-txt">라. 기타 사이트 소정의 이용신청요건을 충족하지 못하는 경우</div>
+        </div>          
+      </div>             
+    </div>		
+  </div>
+
+  <script src="../scripts/jquery-3.6.0.min.js"></script>
+  <script src="../scripts/jquery-ui.min.js"></script>
+  <script src="../scripts/script.js"></script>
+  <script>
+    $(".btn-terms").on('click',function(){
+      $("#modal-background").fadeIn(300);
+      $(".popup-terms").css("display", "flex").hide().fadeIn();
+      $("body").css("overflow", "hidden");
+    });       
+  </script>
+</body>
+</html>

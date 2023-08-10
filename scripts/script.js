@@ -51,6 +51,7 @@ $(".btn-sidebar").on("click", function(){
   })  
   
   $(".ic-bookmark").click(function(){$(this).toggleClass("on");})
+  
   function setTabArrowBtn(curLeft){
     var leftBtn = $(".btn-tab-arrow.left");
     var rightBtn = $(".btn-tab-arrow.right");        
@@ -130,4 +131,13 @@ jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up"></div
         spinner.find("input").trigger("change");
       });
 
+    });
+
+// background
+    $("#modal-background, .close").on('click',function(){      
+      if ($(this).hasClass("close")){
+        $("#modal-background").fadeOut(300);
+        $(".modal-con").fadeOut(300);  
+        $('body').css('overflow', 'overlay');
+      }
     });

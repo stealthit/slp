@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body { 
+      padding: 30px; 
+      .btn-white {margin-bottom: 30px;}
+    }
+  </style>
+  <script></script>
+  <title>Document</title>
+</head>
+<body>
+  <button class="btn-msg1 btn-white">메세지박스 1 라인</button>
+  <button class="btn-msg2 btn-white">메세지박스 2 라인</button>
+  <button class="btn-msg3 btn-white">타이틀메세지박스 1 라인</button>
+  <button class="btn-msg4 btn-white">타이틀메세지박스 2 라인</button>
+  <div id="modal-background"></div>
+  <div class="popup-msg line1 modal-con">
+    <div class="msg-box">
+      <div class="msg-txt">회원정보가 수정되었습니다</div>
+    </div>
+    <div class="edit-btn-wrapper">
+      <button type="button" onclick="closePopup()" class="close btn-navy">확인</button>
+    </div>
+  </div>
+
+  <div class="popup-msg line2 modal-con">
+    <div class="msg-box">
+      <div class="msg-txt">회원정보가 수정되었습니다</div>
+      <div class="msg-txt">2라인</div>
+    </div>
+    <div class="edit-btn-wrapper">
+      <button type="button" onclick="closePopup()" class="close btn-navy">확인</button>
+    </div>
+  </div>
+  
+  <div class="popup-msg title-line1 modal-con">
+    <div class="modal-top">
+      <div class="box-title">팝업 타이틀</div>
+      <button type="button" onclick="closePopup()" class="close bt-popup-close"></button>
+    </div>  
+    <div class="msg-box">
+      <div class="msg-txt">회원정보가 수정되었습니다</div>
+    </div>
+    <div class="edit-btn-wrapper">
+      <button type="button" onclick="closePopup()" class="close btn-navy">확인</button>
+    </div>
+  </div>
+  
+  <div class="popup-msg title-line2 modal-con">
+    <div class="modal-top">
+      <div class="box-title">팝업 타이틀</div>
+      <button type="button" onclick="closePopup()" class="close bt-popup-close"></button>
+    </div>      
+    <div class="msg-box">
+      <div class="msg-txt">회원정보가 수정되었습니다</div>
+      <div class="msg-txt">2라인</div>
+    </div>        
+    <div class="edit-btn-wrapper">
+      <button type="button" onclick="closePopup()" class="close btn-navy">확인</button>
+    </div>    
+  </div>
+
+  <script src="../scripts/jquery-3.6.0.min.js"></script>
+  <script src="../scripts/jquery-ui.min.js"></script>
+  <script src="../scripts/script.js"></script>
+  <script>
+    $(".btn-msg1").on('click',function(){
+      $("#modal-background").fadeIn(300);
+      $(".popup-msg.line1").css("display", "flex").hide().fadeIn();
+      $("body").css("overflow", "hidden");
+    }); 
+    $(".btn-msg2").on('click',function(){
+      $("#modal-background").fadeIn(300);
+      $(".popup-msg.line2").css("display", "flex").hide().fadeIn();
+      $("body").css("overflow", "hidden");
+    }); 
+    $(".btn-msg3").on('click',function(){
+      $("#modal-background").fadeIn(300);
+      $(".popup-msg.title-line1").css("display", "flex").hide().fadeIn();
+      $("body").css("overflow", "hidden");
+    }); 
+    $(".btn-msg4").on('click',function(){
+      $("#modal-background").fadeIn(300);
+      $(".popup-msg.title-line2").css("display", "flex").hide().fadeIn();
+      $("body").css("overflow", "hidden");
+    }); 
+  </script>
+</body>
+</html>
