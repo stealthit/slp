@@ -371,7 +371,7 @@ select option, select.select-box option {
       -ms-flex-align: center;
           align-items: center;
   gap: 8px;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: bold;
   color: #5c7099;
 }
@@ -467,6 +467,7 @@ select option, select.select-box option {
 
 .search-btn-group .btn-search {
   height: 26px;
+  font-size: 13px;
 }
 
 .search-btn-group .btn-search img {

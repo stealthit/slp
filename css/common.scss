@@ -308,7 +308,7 @@ select, select.select-box {
   align-items: center;
   gap: 8px;
   // padding-right: 10px;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: bold;
   color: #5c7099;
   button {
@@ -338,6 +338,7 @@ select, select.select-box {
   line-height: 1.58;                
   .btn-search {
     height: 26px;  
+    font-size: 13px;
     img {
       content: url(../assets/ic_bt_search@3x.png);
       width: 11px;
