@@ -2476,6 +2476,7 @@ ul.list-tab li.list-tab-menu.on {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  height: calc(100% - 68px);
 }
 
 .Ptype07 .info-box, .Ptype08 .info-box {
