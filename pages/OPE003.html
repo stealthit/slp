@@ -5,8 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
   <title>Document</title>
-  <link rel="stylesheet" href="../css/common.css">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/main.css">  
   <script></script>
 </head>
 <body>
@@ -142,7 +141,7 @@
             <img class="ic-navi-arrow">발주
             <img class="ic-navi-arrow">납입카드 출력
           </div>
-          <div class="tab-contents DSE010">
+          <div class="tab-contents Ptype04">
             <div class="search-conditions con-box">  
               <div class="setting-grid">
                 <div class="setting-grid-title">아이디</div>
@@ -193,7 +192,7 @@
               <div class="list-top">
                 <div class="list-title ic-title-mark">사용자 정보</div>
                 <div class="edit-btn-wrapper">                  
-                  <button class="btn-white"><img class="ic-line-plus">행 추가</button>
+                  <button class="btn-white btn-add"><img class="ic-line-plus">행 추가</button>
                   <button class="btn-white"><img class="ic-line-minus">행 삭제</button>                  
                   <button class="btn-navy"><img class="ic-bt-save">저장</button>
                 </div>  
@@ -206,13 +205,141 @@
             </div>
           </div>          
         </div>
-        <div class="footer">Copyright © 스마트물류플랫폼 All right reserved.</div>
+        <!-- <div class="footer">Copyright © 스마트물류플랫폼 All right reserved.</div> -->
       </main>
+    </div>
+  </div>
+
+  <div id="modal-background"></div>
+  <div class="popup-reg-user modal-con">
+    <div class="modal-top">
+      <div class="box-title">사용자 등록</div>
+      <button type="button" onclick="closePopup()" class="close bt-popup-close"></button>
+    </div>  
+    <div class="modal-body">
+      <div class="setting-grid con-box">
+        <div class="setting-grid-title">아이디</div>
+        <div class="setting-grid-content">  
+          <div class="input-wrapper">                    
+            <input type="text" value="" /> 
+          </div>                                     
+        </div>
+        <div class="setting-grid-title">비밀번호</div>
+        <div class="setting-grid-content">  
+          <div class="input-wrapper">                    
+            <input type="text" value="" /> 
+          </div>                                     
+        </div>
+        <div class="setting-grid-title">사용자명</div>
+        <div class="setting-grid-content">  
+          <div class="input-wrapper">                    
+            <input type="text" value="" /> 
+          </div>                                     
+        </div>
+        <div class="setting-grid-title">사용자유형</div>
+        <div class="setting-grid-content">  
+          <div class="input-group">
+            <select>
+              <option value="" selected></option>
+              <option value="">옵션1</option>
+              <option value="">옵션2</option>                      
+            </select>                  
+          </div>                                  
+        </div> 
+        <div class="setting-grid-title">권한그룹</div>
+        <div class="setting-grid-content">  
+          <div class="input-group">
+            <select>
+              <option value="" selected></option>
+              <option value="">옵션1</option>
+              <option value="">옵션2</option>                      
+            </select>                  
+          </div>                                  
+        </div>  
+        <div class="setting-grid-title">연락처</div>
+        <div class="setting-grid-content">  
+          <div class="input-wrapper">                    
+            <input type="text" value="" /> 
+          </div>                                     
+        </div> 
+        <div class="setting-grid-title">이메일</div>
+        <div class="setting-grid-content">  
+          <div class="input-wrapper">                    
+            <input type="text" value="" /> 
+          </div>                                     
+        </div>  
+        <div class="setting-grid-title">회사명</div>
+        <div class="setting-grid-content">  
+          <div class="input-btn-group">                    
+            <input type="text" value="" /> 
+            <button class="btn-company"><img class="ic-search-s"></button>
+          </div>                                     
+        </div>  
+        <div class="setting-grid-title">사업자번호</div>
+        <div class="setting-grid-content">  
+          <div class="input-wrapper">                    
+            <input type="text" value="" /> 
+          </div>                                     
+        </div> 
+        <div class="setting-grid-title">업태</div>
+        <div class="setting-grid-content">  
+          <div class="input-wrapper">                    
+            <input type="text" value="" /> 
+          </div>                                     
+        </div>
+        <div class="setting-grid-title">업종</div>
+        <div class="setting-grid-content">  
+          <div class="input-wrapper">                    
+            <input type="text" value="" /> 
+          </div>                                     
+        </div>
+        <div class="setting-grid-title">부서</div>
+        <div class="setting-grid-content">  
+          <div class="input-wrapper">                    
+            <input type="text" value="" /> 
+          </div>                                     
+        </div>
+        <div class="setting-grid-title">이메일 수신</div>
+        <div class="setting-grid-content">            
+          <div class="check-box"><input type="checkbox" name="" id=""></div>  
+        </div>
+        <div class="setting-grid-title">이용약관 동의</div>
+        <div class="setting-grid-content">            
+          <div class="check-box"><input type="checkbox" name="" id=""></div>  
+        </div>
+        <div class="setting-grid-title">개인정보 동의</div>
+        <div class="setting-grid-content">            
+          <div class="check-box"><input type="checkbox" name="" id=""></div>  
+        </div>
+        <div class="setting-grid-title">위치정보 동의</div>
+        <div class="setting-grid-content">            
+          <div class="check-box"><input type="checkbox" name="" id=""></div>  
+        </div>
+        <div class="setting-grid-title">SMS 동의</div>
+        <div class="setting-grid-content">            
+          <div class="check-box"><input type="checkbox" name="" id=""></div>  
+        </div>
+        <div class="setting-grid-title">사용여부</div>
+        <div class="setting-grid-content">            
+          <div class="check-box"><input type="checkbox" name="" id=""></div>  
+        </div>
+      </div>
+    </div>
+		<div class="modal-bottom">
+      <button type="button" onclick="closePopup()" class="close btn-white">취소</button>
+      <button type="button" class="btn-save btn-navy">저장</button>
     </div>
   </div>
 
   <script src="../scripts/jquery-3.6.0.min.js"></script>
   <script src="../scripts/jquery-ui.min.js"></script>
   <script src="../scripts/script.js"></script>
+  <script>
+    $(".btn-add").on('click',function(){
+      $("#modal-background").fadeIn(300);
+      $(".popup-reg-user").css("display", "flex").hide().fadeIn();
+      $("body").css("overflow", "hidden");
+    });        
+  </script>
 </body>
 </html>

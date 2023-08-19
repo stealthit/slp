@@ -5,14 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
   <title>Document</title>
-  <link rel="stylesheet" href="../../css/main.css">  
+  <link rel="stylesheet" href="../css/main.css">  
   <script></script>
 </head>
 <body>
   <div class="wrapper">
     <div class="header">
       <div class="header-logo">
-        <img src="../../assets/img_logo@3x.png" alt="" width="19" height="19">
+        <img src="../assets/img_logo@3x.png" alt="" width="19" height="19">
         스마트물류플랫폼
       </div>      
       <div class="header-center">
@@ -31,7 +31,7 @@
         </div>
       </div>
       <div class="header-favorite">
-        <img src="../../assets/ic_bookmark_on@3x.png" alt="" width="16" height="16">
+        <img src="../assets/ic_bookmark_on@3x.png" alt="" width="16" height="16">
         즐겨찾기
       </div>      
     </div>
@@ -115,7 +115,7 @@
         <div class="content-wrapper">
           <div class="tab-container">            
             <ul class="tab">
-              <li class="tab-menu on"><img class="ic-bookmark on"> 입고조회 <img class="ic-tab-close"> </li>
+              <li class="tab-menu on"><img class="ic-bookmark on"> 창고 공유정보 종료 <img class="ic-tab-close"> </li>
               <li class="tab-menu"><img class="ic-bookmark"> ASN 정보 전송<img class="ic-tab-close"></li>
               <li class="tab-menu"><img class="ic-bookmark">납품오더취소 등록<img class="ic-tab-close"></li>
               <li class="tab-menu"><img class="ic-bookmark">재고조정현황 조회<img class="ic-tab-close"></li>
@@ -137,62 +137,58 @@
           </div>
           <div class="location">    
             <div class="nav-home"><img class="ic-navi-home">Home</div>
-            <img class="ic-navi-arrow">납품
-            <img class="ic-navi-arrow">입고
-            <img class="ic-navi-arrow">입고조회
+            <img class="ic-navi-arrow">물류납품
+            <img class="ic-navi-arrow">발주
+            <img class="ic-navi-arrow">납입카드 출력
           </div>
           <div class="tab-contents Ptype04">
             <div class="search-conditions con-box">              
               <div class="setting-grid">
-                <div class="setting-grid-title">입고오더번호</div>
+                <div class="setting-grid-title">년월</div>
                 <div class="setting-grid-content">  
-                  <div class="input-group">
-                    <select>                      
-                      <option value="">옵션1</option>
-                      <option value="">옵션2</option>
-                      <option value="">옵션3</option>
-                    </select>                  
-                  </div>                
-                </div>   
-                <div class="setting-grid-title">부품명</div>
+                  <div class="input-wrapper">                     
+                    <input type="month" value="2022-06"/>
+                  </div>             
+                </div>
+                <div class="setting-grid-title">업체명</div>
+                <div class="setting-grid-content">   
+                  <div class="input-wrapper">                    
+                    <input type="text" value="" /> 
+                  </div>  
+                </div>
+                <div class="setting-grid-title">사업자등록번호</div>
                 <div class="setting-grid-content">  
-                  <div class="input-group">
-                    <select>                      
-                      <option value="">옵션1</option>
-                      <option value="">옵션2</option>
-                      <option value="">옵션3</option>
-                    </select>                  
-                  </div>                
-                </div>                                            
-                <div class="setting-grid-title">입고오더일자</div>
+                  <div class="input-wrapper">                    
+                    <input type="text" value="" /> 
+                  </div>                     
+                </div>                
+                <div class="setting-grid-title">정산여부</div>
                 <div class="setting-grid-content">      
-                  <div class="input-wrapper">
-                    <input type="date" value="2022-01-01"/>                    
+                  <div class="input-group">
+                    <select>
+                      <option value="" selected>전체</option>
+                      <option value="">옵션1</option>
+                      <option value="">옵션2</option>
+                      <option value="">옵션3</option>
+                    </select>                  
                   </div>           
-                </div>  
-                <div class="setting-grid-title">입고현황</div>
-                <div class="setting-grid-content span-3">      
-                  <div class="input-check-group">
-                    <div class="check-box">
-                      <input type="checkbox" name="" id="" checked>입고오더등록
-                    </div>
-                    <div class="check-box">
-                      <input type="checkbox" name="" id="">입고예정등록
-                    </div>
-                    <div class="check-box">
-                      <input type="checkbox" name="" id="">입고완료
-                    </div>
-                  </div>            
-                </div> 
+                </div>                
               </div>
               <div class="search-btn-group">
                 <div class="btn-search btn-navy"><img>조회</div>
                 <div class="btn-clear btn-white"><img>초기화</div>
               </div>
-            </div>            
-            <div class="search-list con-box">              
+            </div>
+            <div class="search-list">
+              <div class="list-top">
+                <div class="list-title ic-title-mark">정산 내역</div>
+                <div class="list-btn-group">
+                  <div class="btn-white">SMS 발송</div>
+                  <div class="btn-navy">사용료 정산</div>                  
+                </div>
+              </div>
               <!-- 개발 작업시 그리드 들어갈 부분 -->
-              <div class="list-grid-wrapper">
+              <div class="list-grid-wrapper con-box">
                 그리드 영역
               </div>
               <!---------------------------------->
@@ -204,8 +200,8 @@
     </div>
   </div>
 
-  <script src="../../scripts/jquery-3.6.0.min.js"></script>
-  <script src="../../scripts/jquery-ui.min.js"></script>
-  <script src="../../scripts/script.js"></script>
+  <script src="../scripts/jquery-3.6.0.min.js"></script>
+  <script src="../scripts/jquery-ui.min.js"></script>
+  <script src="../scripts/script.js"></script>
 </body>
 </html>

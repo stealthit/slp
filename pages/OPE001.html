@@ -5,8 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
   <title>Document</title>
-  <link rel="stylesheet" href="../css/common.css">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/main.css">  
   <script></script>
 </head>
 <body>
@@ -142,7 +141,7 @@
             <img class="ic-navi-arrow">발주
             <img class="ic-navi-arrow">납입카드 출력
           </div>
-          <div class="tab-contents OPE001">
+          <div class="tab-contents Ptype05">
             <div class="search-conditions con-box">              
               <div class="setting-grid">                
                 <div class="setting-grid-title">시스템</div>
@@ -174,7 +173,7 @@
                 </div>
                 <!-- 개발 작업시 그리드 들어갈 부분 -->
                 <div class="list-grid-wrapper con-box">
-                  <div class="btn-white btn-popup-ope001"><img>권한등록팝업버튼</div>
+                  <div class="btn-white btn-popup-mtype01"><img>권한등록팝업버튼</div>
                   그리드 영역
                 </div>
                 <!---------------------------------->
@@ -197,14 +196,14 @@
             </div>
           </div>          
         </div>
-        <div class="footer">Copyright © 스마트물류플랫폼 All right reserved.</div>
+        <!-- <div class="footer">Copyright © 스마트물류플랫폼 All right reserved.</div> -->
       </main>
     </div>
   </div>
 
   <div id="modal-background"></div>
 
-	<div class="popup-ope001 modal-con">
+	<div class="popup-mtype01 modal-con">
     <div class="modal-top">
       <div class="box-title">권한등록</div>
       <button type="button" onclick="closePopup()" class="close bt-popup-close"></button>
@@ -255,9 +254,9 @@
   <script src="../scripts/script.js"></script>
 
   <script>
-    $(".btn-popup-ope001").on('click',function(){
+    $(".btn-popup-mtype01").on('click',function(){
       $("#modal-background").fadeIn(300);
-      $(".popup-ope001").css("display", "flex").hide().fadeIn();
+      $(".popup-mtype01").css("display", "flex").hide().fadeIn();
       $("body").css("overflow", "hidden");
     });       
 
