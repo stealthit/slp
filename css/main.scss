@@ -1404,7 +1404,8 @@ ul.list-tab {
         display: flex;  
         gap: 10px; 
         font-size: 12px;
-        line-height: 1.58;                
+        line-height: 1.58;   
+        button {height: 24px;padding: 3px 10px 2px;}             
         .btn-delete {
           width: 58px;
           height: 24px;                  
@@ -1438,7 +1439,8 @@ ul.list-tab {
   & > .edit-btn-wrapper {padding-right: 10px;}
 }
 
-// DSE001 -> Ptype01, DSE002 -> Ptype02, DSE009 -> Ptype03
+// DSE001 -> Ptype01, DSE002 -> Ptype02, DSE009 -> Ptype03, DSE010 -> Ptype04, OPE001 -> Ptype05 
+// OPE002 -> Ptype06, OPE004 -> Ptype07, OPE005 -> Ptype08
 .Ptype01, .Ptype02 {
   .list-top {padding-right: 10px;}
   .list-wrapper {
@@ -1582,11 +1584,10 @@ ul.list-tab {
         color: #5c7099;
         display: flex;
         .check-box {
-          text-align: right;
-          flex: 1; 
+          text-align: right;          
           gap: 10px;
           display: grid;
-          grid-template-columns: 90px 1fr;
+          grid-template-columns: 90px 100px;
         }
       }      
     }
