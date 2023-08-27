@@ -1143,6 +1143,7 @@ textarea {
 }
 
 .btn-navy {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1159,6 +1160,7 @@ textarea {
 }
 
 .btn-white {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1820,6 +1822,7 @@ ul.list-tab li.list-tab-menu.on {
 }
 
 .wrapper .main-wrapper .sidebar-container .sidebar-menu-wrapper details summary {
+  cursor: pointer;
   padding-left: 14px;
   padding-right: 10px;
   margin-right: 12px;
@@ -1863,6 +1866,7 @@ ul.list-tab li.list-tab-menu.on {
 }
 
 .wrapper .main-wrapper .sidebar-container .sidebar-menu-wrapper details ul.details-submenu li {
+  cursor: pointer;
   border-left: 1px solid #e2e5e9;
   display: -webkit-box;
   display: -ms-flexbox;
