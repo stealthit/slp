@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/mobile.css">  
+  <title>Document</title>
+</head>
+<body>
+  <div id="previewModal">
+    <div class="preview-top">
+      <button class="modal-close btn-preview-close"></button>
+      <div class="title">미리보기</div>
+    </div>
+    <div class="preview-body">
+      <img src="../../assets/mobile/preview.png" alt="">
+    </div>
+  </div>
+  <script src="../../scripts/jquery-3.6.0.min.js"></script>
+  <script src="../../scripts/jquery-ui.min.js"></script>
+  <script>
+    // background
+    $(".modal-close").on('click',function(){           
+        $("#modal-background").fadeOut(300);
+        $(".modal-con").animate({left: '-360px'},300);
+        $('body').css('overflow', 'overlay');      
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/mobile.css">  
+</head>
+<body>
+  <div class="mobile-wrap">
+    <header class="mobile-head">
+      <button class="btn-prev"></button>
+      <div class="title">공유정산내역조회</div>
+      <button class="btn-menu"></button>    
+    </header>
+    <main class="mobile-content">
+      <div class="search-condition con-box">        
+        <div class="row">
+          <div class="condition-title col">매칭구분</div>
+          <div class="input-wrapper col">
+            <div class="select-group">
+              <select>
+                <option value="" selected>창고</option>
+                <option value="">차량</option>
+                <option value="">기자재</option>
+                <option value="">인력</option>
+              </select>                  
+            </div>  
+          </div>
+        </div>  
+        <div class="row">
+          <div class="condition-title col">수요자ID</div>
+          <div class="input-wrapper col">            
+            <input type="text" name="" id="">
+          </div>
+        </div>        
+        <div class="row">
+          <div class="condition-title col">수요자명</div>
+          <div class="input-wrapper col">            
+            <input type="text" name="" id="">
+          </div>
+        </div>     
+        <div class="row">
+          <div class="condition-title col">조회기간</div>
+          <div class="input-wrapper col">
+            <input type="date" name="" id="" value="2022-08-01">부터
+          </div>
+        </div> 
+        <div class="row">
+          <div class="condition-title col"></div>
+          <div class="input-wrapper col">
+            <input type="date" name="" id="" value="2022-08-31">까지
+          </div>
+        </div>                            
+        <div class="row">
+          <button class="btn-clear btn-white col">초기화</button>
+          <button class="btn-search btn-main col">조회</button>
+        </div>
+      </div>
+      <div class="search-list flex-1">
+        <div class="list-top">
+          <div class="list-title ic-title-mark">공유정산내역</div>          
+        </div>
+        <div class="table-wrapper con-box flex-1">
+          <table class="mobile-table" width="843">
+            <colgroup>
+              <col width="100px" />
+              <col width="94px" />
+              <col width="94px" />
+              <col width="94px" />              
+              <col width="100px" />
+              <col width="80px" />
+              <col width="80px" />              
+              <col width="80px" />
+              <col width="80px" />
+              <col width="120px" />              
+              <col width="100px" />
+            </colgroup>
+            <thead>              
+              <tr>
+                <th>공급자ID</th>
+                <th>공급자명</th>
+                <th>공유자원ID</th>
+                <th>공유자원명</th>
+                <th>매칭일자</th>
+                <th>사용일자</th>
+                <th>층수</th>                
+                <th>구분</th>
+                <th>공유기간</th>                
+                <th>기본기간</th>
+                <th>금액</th>                
+              </tr>
+            </thead>
+            <tbody class="table-body">
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>                
+                <td></td>
+                <td></td>
+                <td></td>                
+                <td></td>                
+                <td></td>                
+                <td></td>                
+                <td></td>                
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>    
+  </div>
+
+  <div id="modal-background"></div>	
+  <div id="mainMenu" class="modal-con"></div>
+
+
+  <script src="../../scripts/jquery-3.6.0.min.js"></script>
+  <script src="../../scripts/jquery-ui.min.js"></script>  
+
+  <script>        
+
+    $(".btn-menu").on('click',function(){
+      $("#mainMenu").load("menu.html");
+      $("#modal-background").fadeIn(300);
+      $("#mainMenu").animate({left: '0'},300);
+      $("body").css("overflow", "hidden");
+    });
+   
+  </script>
+
+</body>
+</html>

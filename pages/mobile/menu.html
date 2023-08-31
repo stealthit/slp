@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/mobile.css">  
+  <title>Document</title>
+</head>
+<body>
+  <div id="menuModal">
+    <div class="menu-top">
+      <button class="modal-close btn-menu-close"></button>
+      <button class="btn-white btn-logout">로그아웃</button>  
+      <div class="user-wrap">
+        <div class="company-name">회사명</div>
+        <div class="user-name">홍길동<span>님</span></div>
+      </div>
+    </div>
+    <div class="menu-body">
+      <ul class="menu-depth1">
+        <li class="current" data-tab="menu-1">물류납품</li>
+        <li data-tab="menu-2">물류창고</li>
+        <li data-tab="menu-3">물류운송</li>
+        <li data-tab="menu-4">물류관제</li>
+        <li data-tab="menu-5">물류공유</li>
+        <li data-tab="menu-6">운영관리</li>
+        <li data-tab="menu-7">시스템관리</li>
+      </ul>
+      <div id="menu-1" class="menu-depth2 current">
+        <details open class="active">
+          <summary>
+            <div class="submenu-title"> 발주 </div>
+            <img class="ic-submenu-open">
+          </summary>
+          <ul class="details-submenu">
+            <li>입고오더등록</li>
+            <li class="active">납입카드 출력</li>
+            <li>ASN 등록</li>
+            <li>ASN 정보 전송</li>
+            <li>입고현황조회</li>
+            <li>취소 ASN 선택</li>
+            <li>ASN 취소 등록</li>
+            <li>취소 정보 전송</li>
+          </ul>
+        </details>  
+        <details>
+          <summary>
+            <div class="submenu-title"> 수주 </div>              
+            <img class="ic-submenu-open">
+          </summary>
+          <ul class="details-submenu">
+            <li>납품오더수신(I/F)</li>
+            <li>납품오더등록</li>
+            <li>납품취소 선택</li>
+            <li>납품오더취소 등록</li>
+            <li>납품취소 정보 전송</li>
+            <li>출고오더정보 생성</li>
+            <li>출고오더정보 전송</li>
+            <li>운송오더정보 생성</li>
+            <li>운송오더정보 전송</li>
+            <li>납품현황조회</li>
+          </ul>
+        </details>  
+        <details>
+          <summary>
+            <div class="submenu-title"> 재고 </div>              
+            <img class="ic-submenu-open">
+          </summary>
+          <ul class="details-submenu">
+            <li>재고현황조회</li>
+            <li>재고조정지시</li>
+            <li>재고조정지시 전송</li>
+            <li>재고조정현황 조회</li>
+            <li>재고조정취소 선택</li>
+            <li>재고조정취소 등록</li>
+            <li>취소지시전송</li>
+          </ul>
+        </details>  
+        <details>
+          <summary>
+            <div class="submenu-title"> 반품 </div>              
+            <img class="ic-submenu-open">
+          </summary>
+          <ul class="details-submenu">
+            <li>반출오더등록</li>
+            <li>반출오더전송</li>
+            <li>반출증출력리포트</li>
+            <li>반출현황조회</li>
+            <li>반출취소 선택</li>
+            <li>반출취소 등록</li>
+            <li>반출취소 전송</li>
+            <li>회수오더등록</li>
+            <li>회수오더전송</li>
+            <li>회수현황조회</li>
+          </ul>
+        </details>             
+      </div>
+      <div id="menu-2" class="menu-depth2"></div>
+      <div id="menu-3" class="menu-depth2"></div>
+      <div id="menu-4" class="menu-depth2"></div>
+      <div id="menu-5" class="menu-depth2"></div>
+      <div id="menu-6" class="menu-depth2"></div>
+      <div id="menu-7`" class="menu-depth2"></div>
+    </div>
+  </div>
+  <script src="../../scripts/jquery-3.6.0.min.js"></script>
+  <script src="../../scripts/jquery-ui.min.js"></script>
+  <script>
+    // background
+    $(".modal-close").on('click',function(){           
+        $("#modal-background").fadeOut(300);
+        $(".modal-con").animate({left: '-360px'},300);
+        $('body').css('overflow', 'overlay');      
+    });
+
+    $('ul.menu-depth1 li').on('click',function(){
+      var tab_id = $(this).attr('data-tab');
+
+      $('ul.menu-depth1 li').removeClass('current');
+      $('.menu-depth2').removeClass('current');
+
+      $(this).addClass('current');
+      $("#"+tab_id).addClass('current');
+    })
+
+    $('.details-submenu li').on('click',function(){
+      $('.details-submenu li').removeClass('active');
+      $(this).addClass('active');
+
+      $('.menu-depth2 details').removeClass('active');
+      $(this).parent().addClass('active');
+    })
+  </script>
+</body>
+</html>

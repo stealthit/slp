@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/mobile.css">  
+</head>
+<body>
+  <div class="mobile-wrap">
+    <header class="mobile-head">
+      <button class="btn-prev"></button>
+      <div class="title">공급자 소통게시판</div>
+      <button class="btn-menu"></button>    
+    </header>
+    <main class="mobile-content">
+      <div class="search-condition con-box">
+        <div class="row">
+          <div class="condition-title col">매칭수요일자</div>
+          <div class="input-wrapper col">
+            <input type="date" name="" id="" value="2022-08-01">부터
+          </div>
+        </div> 
+        <div class="row">
+          <div class="condition-title col"></div>
+          <div class="input-wrapper col">
+            <input type="date" name="" id="" value="2022-08-31">까지
+          </div>
+        </div>     
+        <div class="row">
+          <div class="condition-title col">공급자 ID</div>
+          <div class="input-wrapper col">
+            <input type="text" name="" id="">
+          </div>
+        </div>  
+        <div class="row">
+          <div class="condition-title col">공급자명</div>
+          <div class="input-wrapper col">
+            <input type="text" name="" id="">
+          </div>
+        </div>                        
+        <div class="row">
+          <button class="btn-clear btn-white col">초기화</button>
+          <button class="btn-search btn-main col">조회</button>
+        </div>
+      </div>
+      <div class="search-list">
+        <div class="list-top">
+          <div class="list-title ic-title-mark">공유자</div>          
+        </div>
+        <div class="table-wrapper con-box flex-1">
+          <table class="mobile-table" width="100%">
+            <colgroup>
+              <col width="25%" />
+              <col width="25%" />
+              <col width="25%" />
+              <col width="25%" />
+            </colgroup>
+            <thead>              
+              <tr>
+                <th>수요자ID</th>
+                <th>수요자명</th>
+                <th>공유구분</th>
+                <th>공유ID</th>                                            
+              </tr>
+            </thead>
+            <tbody class="table-body">
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>                
+                <td></td>                
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="search-list">
+        <div class="list-top">
+          <div class="list-title ic-title-mark">소통 내역 등록</div>          
+          <div class="btn-group">
+            <button class="btn-white">삭제</button>
+            <button class="btn-main">등록</button>
+          </div>
+        </div>
+        <div class="con-box text-edit">
+          <textarea name="" id=""></textarea>
+        </div>
+      </div>
+      <div class="search-list">
+        <div class="list-top">
+          <div class="list-title ic-title-mark">소통 답변 내용</div>          
+        </div>
+        <div class="con-box text-view">          
+          소통 답변 내용이 표시 됩니다.
+        </div>
+      </div>
+    </main>    
+  </div>
+
+  <div id="modal-background"></div>	
+  <div id="mainMenu" class="modal-con"></div>
+
+
+  <script src="../../scripts/jquery-3.6.0.min.js"></script>
+  <script src="../../scripts/jquery-ui.min.js"></script>  
+
+  <script>
+    
+    $(".btn-menu").on('click',function(){
+      $("#mainMenu").load("menu.html");
+      $("#modal-background").fadeIn(300);
+      $("#mainMenu").animate({left: '0'},300);
+      $("body").css("overflow", "hidden");
+    });
+   
+  </script>
+
+</body>
+</html>

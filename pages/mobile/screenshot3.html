@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/mobile.css">  
+</head>
+<body>
+  <div class="mobile-wrap">
+    <header class="mobile-head">
+      <button class="btn-prev"></button>
+      <div class="title flex-1">Page 0</div>      
+      <!-- <button class="btn-menu"></button>     -->
+    </header>
+    <main class="mobile-content">      
+      <div class="schedule-box con-box">
+        <div class="key-info">
+          <div class="key-info-name">현대인<img class="ic-bookmark"></div>
+          <ul class="key-info-txt">
+            <li>셔틀001#11</li>
+            <li>16 plt, 0 cbm</li>
+            <li>메모</li>
+          </ul>
+        </div>
+        <details open>
+          <summary>
+            <div class="list-title">
+              <div class="list-time">09:30</div>
+              <div class="list-txt"><img class="ic-circle-up">현대인 3공장 A</div>
+            </div>
+            <img class="ic-submenu-open">
+          </summary>  
+          <div class="sub-list">
+            <div class="addr">울산 북구</div>
+            <div class="sub-list-info"><img class="ic-circle-up-s">ABC-0001 외 9종</div>
+          </div>        
+        </details>  
+        <details>
+          <summary>
+            <div class="list-title">
+              <div class="list-time">10:30</div>
+              <div class="list-txt"><img class="ic-circle-up">기아 1공장</div>
+            </div>
+            <img class="ic-submenu-open">
+          </summary>  
+          <div class="sub-list">
+            <div class="addr">울산 북구</div>
+            <div class="sub-list-info"><img class="ic-circle-up-s">ABC-0001 외 9종</div>
+          </div>        
+        </details>  
+        <details>
+          <summary>
+            <div class="list-title">
+              <div class="list-time">11:05</div>
+              <div class="list-txt"><img class="ic-circle-down">현대인 3공장 B</div>
+            </div>
+            <img class="ic-submenu-open">
+          </summary>  
+          <div class="sub-list">
+            <div class="addr">울산 북구</div>
+            <div class="sub-list-info"><img class="ic-circle-up-s">ABC-0001 외 9종</div>
+          </div>        
+        </details>  
+        <details>
+          <summary>
+            <div class="list-title">
+              <div class="list-time">12:30</div>
+              <div class="list-txt"><img class="ic-circle-down">기아 2공장</div>
+            </div>
+            <img class="ic-submenu-open">
+          </summary>  
+          <div class="sub-list">
+            <div class="addr">울산 북구</div>
+            <div class="sub-list-info"><img class="ic-circle-down-s">ABC-0001 외 9종</div>
+          </div>        
+        </details>  
+        <details>
+          <summary>
+            <div class="list-title">
+              <div class="list-time">14:15</div>
+              <div class="list-txt"><img class="ic-circle-down">기아 4공장</div>
+            </div>
+            <img class="ic-submenu-open">
+          </summary>  
+          <div class="sub-list">
+            <div class="addr">울산 북구</div>
+            <div class="sub-list-info"><img class="ic-circle-down-s">ABC-0001 외 9종</div>
+          </div>        
+        </details>  
+      </div>
+      <button class="btn-main btn-start">출발</button>
+    </main>    
+  </div>
+
+  <div id="modal-background"></div>	
+  <div id="mainMenu" class="modal-con"></div>
+
+
+  <script src="../../scripts/jquery-3.6.0.min.js"></script>
+  <script src="../../scripts/jquery-ui.min.js"></script>  
+</body>
+</html>

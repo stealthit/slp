@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/mobile.css">  
+</head>
+<body>
+  <div class="mobile-wrap">
+    <header class="mobile-head">
+      <button class="btn-prev"></button>
+      <div class="title">공유자원사용승인</div>
+      <button class="btn-menu"></button>    
+    </header>
+    <main class="mobile-content">
+      <div class="search-condition con-box">
+        <div class="row">
+          <div class="condition-title col">매칭수요일자</div>
+          <div class="input-wrapper col">
+            <input type="date" name="" id="" value="2022-08-09">
+          </div>
+        </div>  
+        <div class="row">
+          <div class="condition-title col">공유구분</div>
+          <div class="input-wrapper col">
+            <div class="select-group">
+              <select>
+                <option value="">창고</option>
+                <option value="">차량</option>
+                <option value="" selected>기자재</option>
+                <option value="">인력</option>
+              </select>                  
+            </div>  
+          </div>
+        </div>         
+        <div class="row">
+          <div class="condition-title col">수요자ID</div>
+          <div class="input-wrapper col">            
+            <input type="text" name="" id="">
+          </div>
+        </div>                               
+        <div class="row">
+          <button class="btn-clear btn-white col">초기화</button>
+          <button class="btn-search btn-main col">조회</button>
+        </div>
+      </div>
+      <div class="search-list flex-1">
+        <div class="list-top">
+          <div class="list-title ic-title-mark">공유자원사용승인</div>
+          <div class="btn-group">            
+            <button class="btn-main">사용승인</button>
+          </div>
+        </div>
+        <div class="table-wrapper con-box flex-1">
+          <table class="mobile-table" width="843">
+            <colgroup>
+              <col width="100px" />
+              <col width="94px" />
+              <col width="94px" />
+              <col width="94px" />              
+              <col width="100px" />
+              <col width="80px" />
+              <col width="80px" />              
+              <col width="80px" />
+              <col width="80px" />
+              <col width="120px" />              
+              <col width="100px" />
+            </colgroup>
+            <thead>              
+              <tr>
+                <th>수요자ID</th>
+                <th>수요자명</th>
+                <th>공유자원ID</th>
+                <th>공유자원명</th>
+                <th>매칭요청일자</th>
+                <th>구분</th>
+                <th>층수</th>                
+                <th>구분</th>
+                <th>공유기간</th>                
+                <th>기본기간</th>
+                <th>금액</th>                
+              </tr>
+            </thead>
+            <tbody class="table-body">
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>                
+                <td></td>
+                <td></td>
+                <td></td>                
+                <td></td>                
+                <td></td>                
+                <td></td>                
+                <td></td>                
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>    
+  </div>
+
+  <div id="modal-background"></div>	
+  <div id="mainMenu" class="modal-con"></div>
+
+
+  <script src="../../scripts/jquery-3.6.0.min.js"></script>
+  <script src="../../scripts/jquery-ui.min.js"></script>  
+
+  <script>        
+
+    $(".btn-menu").on('click',function(){
+      $("#mainMenu").load("menu.html");
+      $("#modal-background").fadeIn(300);
+      $("#mainMenu").animate({left: '0'},300);
+      $("body").css("overflow", "hidden");
+    });
+   
+  </script>
+
+</body>
+</html>

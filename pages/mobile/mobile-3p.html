@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/mobile.css">  
+</head>
+<body>
+  <div class="mobile-wrap">
+    <header class="mobile-head">
+      <button class="btn-prev"></button>
+      <div class="title">기자재 공유정보</div>
+      <button class="btn-menu"></button>    
+    </header>
+    <main class="mobile-content">
+      <div class="search-condition con-box">
+        <div class="row">
+          <div class="condition-title col">기자재구분</div>
+          <div class="input-wrapper col">
+            <input type="text" name="" id="" value="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="condition-title col">사업자등록번호</div>
+          <div class="input-wrapper col">
+            <input type="text" name="" id="" value="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="condition-title col">기자재업체</div>
+          <div class="input-wrapper col">
+            <input type="text" name="" id="" value="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="condition-title col">사용여부</div>
+          <div class="input-wrapper col">
+            <div class="select-group">
+              <select>
+                <option value="" selected>전체</option>
+                <option value="">옵션1</option>
+                <option value="">옵션2</option>
+                <option value="">옵션3</option>
+              </select>                  
+            </div>  
+          </div>
+        </div>
+        <div class="row">
+          <div class="condition-title col">공유여부</div>
+          <div class="input-wrapper col">
+            <div class="select-group">
+              <select>
+                <option value="" selected>전체</option>
+                <option value="">옵션1</option>
+                <option value="">옵션2</option>
+                <option value="">옵션3</option>
+              </select>                  
+            </div>  
+          </div>
+        </div>
+        <div class="row">
+          <button class="btn-clear btn-white col">초기화</button>
+          <button class="btn-search btn-main col">조회</button>
+        </div>
+      </div>
+      <div class="search-list flex-1">
+        <div class="list-top">
+          <div class="list-title ic-title-mark">기자재 공유정보</div>
+        </div>
+        <div class="table-wrapper con-box flex-1">
+          <table class="mobile-table" width="843">
+            <colgroup>
+              <col width="94px" />
+              <col width="94px" />
+              <col width="94px" />
+              <col width="80px" />
+              <col width="67px" />
+              <col width="68px" />
+              <col width="56px" />
+              <col width="80px" />
+              <col width="68px" />
+              <col width="67px" />
+              <col width="72px" />
+            </colgroup>
+            <thead>              
+              <tr>
+                <th>기자재구분</th>
+                <th>기자재업체</th>
+                <th>사업자번호</th>
+                <th>차량형식</th>
+                <th>총중량</th>
+                <th>마스트</th>
+                <th>높이</th>
+                <th>제조년도</th>
+                <th>제조사</th>
+                <th>모델명</th>
+                <th>모델명</th>
+              </tr>
+            </thead>
+            <tbody class="table-body">
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><button class="btn-pic-detail underline">상세보기</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>    
+  </div>
+
+  <div id="modal-background"></div>
+	<div id="prevPic" class="modal-con"></div>
+  <div id="mainMenu" class="modal-con"></div>
+
+
+  <script src="../../scripts/jquery-3.6.0.min.js"></script>
+  <script src="../../scripts/jquery-ui.min.js"></script>  
+
+  <script>
+    
+    $(".btn-pic-detail").on('click',function(){
+      $("#prevPic").load("mobile-5p.html");
+      $("#modal-background").fadeIn(300);
+      $("#prevPic").animate({left: '0'},300);
+      $("body").css("overflow", "hidden");
+    });
+
+    $(".btn-menu").on('click',function(){
+      $("#mainMenu").load("menu.html");
+      $("#modal-background").fadeIn(300);
+      $("#mainMenu").animate({left: '0'},300);
+      $("body").css("overflow", "hidden");
+    });
+   
+  </script>
+
+</body>
+</html>
