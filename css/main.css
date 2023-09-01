@@ -891,6 +891,7 @@ textarea {
 }
 
 .search-btn-group .btn-search {
+  cursor: pointer;
   height: 26px;
   font-size: 13px;
 }
@@ -903,6 +904,7 @@ textarea {
 }
 
 .search-btn-group .btn-clear {
+  cursor: pointer;
   height: 26px;
 }
 
@@ -1664,6 +1666,7 @@ ul.list-tab li.list-tab-menu.on {
 }
 
 .wrapper .header .header-center .main-menu li {
+  cursor: pointer;
   padding: 0 20px;
   display: -webkit-box;
   display: -ms-flexbox;
