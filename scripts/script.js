@@ -50,7 +50,10 @@ $(".btn-sidebar").on("click", function(){
     setTabArrowBtn(curLeft);
   })  
   
-  $(".ic-bookmark").click(function(){$(this).toggleClass("on");})
+  $(".ic-bookmark").click(function(){
+    if (($(this).parent().hasClass('btn-favorite') == false))
+      $(this).toggleClass("on");
+  })
   
   function setTabArrowBtn(curLeft){
     var leftBtn = $(".btn-tab-arrow.left");
@@ -73,6 +76,8 @@ $(".main-menu li").on("click", function(){
 $("ul.details-submenu li").on("click", function(){
   $("ul.details-submenu li").removeClass("active");
   $(this).addClass("active");
+  $(".sidebar-menu-wrapper details").removeClass("active");
+  $(this).parent().parent().addClass("active");
 })
 //end menu event ------------------------------------------------
 // list-tab  
@@ -89,11 +94,11 @@ $("ul.details-submenu li").on("click", function(){
 $(".btn-search-detail").on("click", function(){
   if ($(this).hasClass("open")) {
     $(this).removeClass("open");
-    $(".search-conditions").animate({height: '84px'});
+    $(".search-conditions").animate({height: '86px'});
   }
   else {
     $(this).addClass("open");
-    var elHeight = document.querySelector(".setting-grid").scrollHeight + 22;
+    var elHeight = document.querySelector(".setting-grid").scrollHeight + 24;
     $(".search-conditions").animate({height: elHeight});
   }
 })
@@ -141,3 +146,29 @@ jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up"></div
         $('body').css('overflow', 'overlay');
       }
     });
+
+
+// location nav-menu event ------------------------------------------
+$(".btn-tab-clear").on("click", function(){
+  if ($(this).hasClass("on")) {
+    $(this).removeClass("on");
+    $(this).next().slideUp("fast");
+  }
+  else {
+    navMenuAllClose();
+    $(this).addClass("on");      
+    $(this).next().slideDown("fast");
+  } 
+})
+
+$("ul.tab-clear-list li").on("click", function(){
+  $(".btn-tab-clear").removeClass("on");
+  $(".tab-clear-list").slideUp("fast");
+})
+
+// menulist allClose
+function navMenuAllClose() {
+  $(".btn-tab-clear").removeClass("on");
+  $(".tab-clear-list").slideUp("fast");  
+}
+// ------------------------------------------------------------------------

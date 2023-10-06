@@ -30,16 +30,34 @@
             <button class="btn-logout">로그아웃</button>
         </div>
       </div>
-      <div class="header-favorite">
+            <!-- <div class="header-favorite">
         <img src="../assets/ic_bookmark_on@3x.png" alt="" width="16" height="16">
         즐겨찾기
-      </div>      
+      </div>       -->    
     </div>
     <div class="main-wrapper">
       <!-- sidebar menu -->
       <button class="btn-sidebar show"><img></button>
       <div class="sidebar-container show">
         <div class="sidebar-menu-wrapper">
+          <details>
+            <summary>
+              <div class="submenu-title"><img class="ic-bookmark-on"> 즐겨찾기 </div>              
+              <img class="ic-submenu-open">
+            </summary>
+            <ul class="details-submenu">
+              <li>납품오더수신(I/F)</li>
+              <li>납품오더등록</li>
+              <li>납품취소 선택</li>
+              <li>납품오더취소 등록</li>
+              <li>납품취소 정보 전송</li>
+              <li>출고오더정보 생성</li>
+              <li>출고오더정보 전송</li>
+              <li>운송오더정보 생성</li>
+              <li>운송오더정보 전송</li>
+              <li>납품현황조회</li>
+            </ul>
+          </details>  
           <details open class="active">
             <summary>
               <div class="submenu-title"><img class="ic_left_1_1 active"> 발주 </div>
@@ -115,22 +133,28 @@
         <div class="content-wrapper">
           <div class="tab-container">            
             <ul class="tab">
-              <li class="tab-menu on"><img class="ic-bookmark on"> 인력 부가정보 등록 <img class="ic-tab-close"> </li>
-              <li class="tab-menu"><img class="ic-bookmark"> ASN 정보 전송<img class="ic-tab-close"></li>
-              <li class="tab-menu"><img class="ic-bookmark">납품오더취소 등록<img class="ic-tab-close"></li>
-              <li class="tab-menu"><img class="ic-bookmark">재고조정현황 조회<img class="ic-tab-close"></li>
-              <li class="tab-menu"><img class="ic-bookmark">반출취소 선택<img class="ic-tab-close"></li>
-              <li class="tab-menu"><img class="ic-bookmark">입수량<img class="ic-tab-close"></li>
-              <li class="tab-menu"><img class="ic-bookmark">반품등록<img class="ic-tab-close"></li>
-              <li class="tab-menu"><img class="ic-bookmark">피킹처리<img class="ic-tab-close"></li>
-              <li class="tab-menu"><img class="ic-bookmark">반출출고지시등록<img class="ic-tab-close"></li>
-              <li class="tab-menu"><img class="ic-bookmark">재고실사지시등록<img class="ic-tab-close"></li>
-              <li class="tab-menu"><img class="ic-bookmark">운송오더상세<img class="ic-tab-close"></li>
-              <li class="tab-menu"><img class="ic-bookmark">상차/하차처리<img class="ic-tab-close"></li>
-              <li class="tab-menu"><img class="ic-bookmark">팔렛타이징처리-PDA<img class="ic-tab-close"></li>
-              <li class="tab-menu"><img class="ic-bookmark">긴급오더추가<img class="ic-tab-close"></li>              
+              <li class="tab-menu on"> 인력 부가정보 등록 <img class="ic-tab-close"> </li>
+              <li class="tab-menu"> ASN 정보 전송<img class="ic-tab-close"></li>
+              <li class="tab-menu">납품오더취소 등록<img class="ic-tab-close"></li>
+              <li class="tab-menu">재고조정현황 조회<img class="ic-tab-close"></li>
+              <li class="tab-menu">반출취소 선택<img class="ic-tab-close"></li>
+              <li class="tab-menu">입수량<img class="ic-tab-close"></li>
+              <li class="tab-menu">반품등록<img class="ic-tab-close"></li>
+              <li class="tab-menu">피킹처리<img class="ic-tab-close"></li>
+              <li class="tab-menu">반출출고지시등록<img class="ic-tab-close"></li>
+              <li class="tab-menu">재고실사지시등록<img class="ic-tab-close"></li>
+              <li class="tab-menu">운송오더상세<img class="ic-tab-close"></li>
+              <li class="tab-menu">상차/하차처리<img class="ic-tab-close"></li>
+              <li class="tab-menu">팔렛타이징처리-PDA<img class="ic-tab-close"></li>
+              <li class="tab-menu">긴급오더추가<img class="ic-tab-close"></li>              
             </ul>
             <div class="tab-arrow-wrapper">
+              <div class="btn-tab-clear">⠇</div>
+              <ul class="tab-clear-list">
+                <li>탭 초기화1</li>
+                <li>탭 초기화2</li>
+                <li>탭 초기화3</li>                
+              </ul>   
               <div class="btn-tab-arrow left"><img src="" alt=""></div>
               <div class="btn-tab-arrow right on"><img src="" alt=""></div>
             </div>
@@ -139,7 +163,7 @@
             <div class="nav-home"><img class="ic-navi-home">Home</div>
             <img class="ic-navi-arrow">물류납품
             <img class="ic-navi-arrow">발주
-            <img class="ic-navi-arrow">납입카드 출력
+            <img class="ic-navi-arrow">납입카드 출력<img class="ic-bookmark">
           </div>
           <div class="tab-contents Ptype01">
             <div class="search-conditions con-box">              
